@@ -211,11 +211,21 @@ nav li:hover {
   grid-column: 8 / -2;
 }
 
+.feature {
+  position: relative;
+}
+
+.feature .container {
+  position: absolute;
+  top: 45%;
+}
+
 .word {
   background-color: var(--clr_light1);
   border-radius: 5px;
   color: var(--clr_dark1);
-  font-weight: 700;
-  padding: 0.5% 1%;
-  width: fit-content;
+  font-weight: var(--main_font_bold);
+  margin: 0 20px;
+  padding: 2%;
+  width: max-content;
 }
