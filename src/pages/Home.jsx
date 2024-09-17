@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Marquee from "react-fast-marquee";
+import MarqueeFeature from "../components/MarqueeFeature";
 
 //FORSIDE
 
@@ -35,25 +35,7 @@ function Home() {
       </section>
       <section className="feature">
         <img src="src\assets\waves\feature_bg.svg" alt="Wave" />
-        <Marquee className="container">
-          <p className="word">kreativ</p>
-          <p className="word">organiseret</p>
-          <p className="word">ansvarsfuld</p>
-          <p className="word">entusiastisk</p>
-          <p className="word">detaljeorienteret</p>
-          <p className="word">ambitiøs</p>
-          <p className="word">hjælpsom</p>
-          <p className="word">pålidelig</p>
-          <p className="word">imødekommende</p>
-          <p className="word">energisk</p>
-          <p className="word">praktisk</p>
-          <p className="word">systematisk</p>
-          <p className="word">løsningsorienteret</p>
-          <p className="word">perfektionistisk</p>
-          <p className="word">vedholdende</p>
-          <p className="word">omsorgsfuld</p>
-          <p className="word">reflekterende</p>
-        </Marquee>
+        <MarqueeFeature />
       </section>
     </main>
   );
