@@ -26,7 +26,7 @@
   --main_font_bold: 700;
 
   /* --- font sizes --- */
-  --font_xs: clamp(.5rem, .8vw, 1rem);
+  --font_xs: clamp(0.5rem, 0.8vw, 1rem);
   --font_s: clamp(1rem, 1.1vw, 1.2rem);
   --nav_size: clamp(1.2rem, 1.3vw, 1.6rem);
   --font_m: clamp(1.5rem, 2vw, 2.5rem);
@@ -78,7 +78,10 @@ h4 {
 }
 
 button,
-p {
+p,
+label,
+input,
+textarea {
   font-family: var(--main_font);
   font-size: var(--font_s);
 }
@@ -102,6 +105,7 @@ h2 {
   background-color: var(--clr_cta);
   border-radius: 5px;
   color: var(--clr_light_bg);
+  cursor: pointer;
   font-weight: 700;
   padding: 2% 4%;
   width: fit-content;
@@ -247,7 +251,7 @@ footer .info {
 
 footer .info h2 {
   color: var(--clr_light_bg);
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 footer .info .so_me {
@@ -264,7 +268,7 @@ footer .info .so_me a {
 footer .info .link {
   color: var(--clr_light_bg);
   font-size: var(--font_s);
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   padding-bottom: 4%;
 }
 
@@ -279,7 +283,7 @@ footer .copy {
 footer .copy p {
   font-size: var(--font_xs);
   font-weight: var(--main_font_light);
-  padding: .5% 8.5%;
+  padding: 0.5% 8.5%;
   text-align: right;
 }
 
@@ -426,4 +430,51 @@ footer .copy p {
 
 .bar #express {
   width: 67%;
+}
+
+/* ----------------
+  CONTACT
+----------------- */
+
+.contact .info {
+  margin: 8% auto 3%;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto 8%;
+  max-width: 1200px;
+  width: 90%;
+}
+
+form input,
+form textarea {
+  background-color: var(--clr_light1);
+  border: 4px solid var(--clr_light2);
+  border-radius: 5px;
+  margin: 1% 0 3%;
+  padding: 1%;
+  outline: none;
+  width: 100%;
+}
+
+form textarea {
+  height: 20vh;
+  resize: none;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  font-family: var(--main_font);
+  font-size: var(--font_s);
+  font-weight: var(--main_font_thin);
+}
+
+form .cta_btn {
+  margin: 2% 0;
+  padding: 1%;
+  text-align: center;
+  width: 25%;
 }
