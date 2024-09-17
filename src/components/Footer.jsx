@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   //Mailto og callto funktionalitet er fra https://www.30secondsofcode.org/react/s/mailto-callto/
+
   const Mailto = ({ email, subject = "", body = "", children }) => {
     let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
@@ -10,9 +11,11 @@ function Footer() {
 
     return <a href={`mailto:${email}${params}`}>{children}</a>;
   };
+
   const Callto = ({ phone, children }) => {
     return <a href={`tel:${phone}`}>{children}</a>;
   };
+
   return (
     <footer>
       <img
@@ -46,7 +49,8 @@ function Footer() {
           </Link>
         </div>
         <div className="link">
-          <Mailto email="imhp@hotmail.dk"
+          <Mailto
+            email="imhp@hotmail.dk"
             subject="Praktikmulighed hos *tilføj din virksomhed*"
             body=""
           >
