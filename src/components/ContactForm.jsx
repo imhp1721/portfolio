@@ -20,28 +20,7 @@ function ContactForm() {
     }).then((res) => res.json());
 
     if (res.success) {
-      let timerInterval;
-      Swal.fire({
-        title: "Tak! Din besked er sendt.",
-        html: "Denne boks lukker om <b></b> sekunder.",
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading();
-          const timer = Swal.getPopup().querySelector("b");
-          timerInterval = setInterval(() => {
-            timer.textContent = `${Swal.getTimerLeft() / 1000}`;
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-      }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log("I was closed by the timer");
-        }
-      });
+        Swal.fire("Tak! Din besked er sendt.");
     }
   };
 
