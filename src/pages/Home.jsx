@@ -11,19 +11,15 @@ function Home() {
       <main className="home">
         <section className="info">
           <article>
-            <h2>Frontend overskrift</h2>
+            <h2>Designbevidst frontend udvikler</h2>
             <p>
-              Som medarbejder er jeg meget optaget af, at mit arbejde er i orden
-              og af høj kvalitet. Som person er jeg meget omhyggelig, og jeg
-              værdsætter orden, stabilitet og fastlagte processer. Da jeg er
-              meget struktureret og pragmatisk anlagt, holder jeg af, at der er
-              tid til at kunne organisere de opgaver, der skal løses. Det er
-              sådan, jeg sikrer mig, at ambitionsniveauet holdes oppe. Jeg tager
-              stort ejerskab for mine opgaver, og jeg trives bedst med klare
-              visioner og konkrete målsætninger – på den måde undgår man
-              ”slinger i valsen”. Derudover motiveres jeg ofte af, at der er
-              fokus på kvalitet fremfor kvantitet, og jeg bruger gerne tid på at
-              dygtiggøre mig.
+              Som multimediedesignstuderende med frontend-specialisering er jeg
+              ikke blot teknisk, men også æstetisk orienteret. Jeg stræber efter
+              at skabe designs, der både er intuitive og appellerende for
+              brugeren, samtidig med at de er velfungerende og strukturerede i
+              koden. Jeg har sans for at skabe content, hvilket jeg praktiserer
+              gennem mit studiejob, men min sande passion ligger i at skabe
+              harmoni mellem de tekniske og visuelle aspekter af mit fag.
             </p>
             <p className="cta_txt">
               Jeg søger praktikplads fra 6. januar 2025.
