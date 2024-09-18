@@ -87,6 +87,7 @@ textarea {
 }
 
 p {
+  hyphens: manual;
   line-height: 175%;
   text-align: justify;
 }
@@ -500,7 +501,7 @@ form .cta_btn {
     --font_s: clamp(0.8rem, 1vw, 1.1rem);
     --nav_size: clamp(0.9rem, 1.15vw, 1.2rem);
     --font_m: clamp(1.2rem, 1.5vw, 1.8rem);
-    --font_l: clamp(1.8rem, 2.5vw, 2.2rem);
+    --font_l: clamp(1.8rem, 2.5vw, 2.8rem);
   }
 
   /* --- NAVIGATION --- */
@@ -573,6 +574,124 @@ form .cta_btn {
 
   .home .info img {
     grid-column: 9 / -1;
+  }
+
+  /* --- skills section --- */
+
+  .skills {
+    margin: 8% auto 3%;
+  }
+
+  .skills h2 {
+    padding-bottom: 0;
+  }
+
+  .bar {
+    border-radius: 3px;
+    height: 15px;
+  }
+
+  .amount {
+    border-radius: 0;
+  }
+
+  /* ----------------
+    CONTACT
+  ----------------- */
+
+  .contact .info {
+    margin: 8% auto 8%;
+  }
+
+  .contact .cta_txt {
+    padding: 3% 0 3%;
+  }
+
+  form {
+    margin: 8% auto 8%;
+  }
+}
+
+/* ----------------
+  SMALL SCREENS
+----------------- */
+
+@media only screen and (max-width: 450px) {
+  #root {
+    /* --- font sizes --- */
+    --font_xs: clamp(0.5rem, 0.5vw, 0.8rem);
+    --font_s: clamp(0.8rem, 0.9vw, 1rem);
+    --nav_size: clamp(0.6rem, 0.8vw, 1rem);
+    --font_m: clamp(1rem, 1.2vw, 1.5rem);
+    --font_l: clamp(1.2rem, 1.2vw, 1.8rem);
+  }
+
+  /* ----------------
+    HERO SECTION
+  ----------------- */
+
+  h1 {
+    margin: 0 15%;
+    top: 3vh;
+    width: 70%;
+  }
+
+  .hero img {
+    max-height: 12vh;
+  }
+
+  /* ----------------
+    NAVIGATION
+  ----------------- */
+
+  nav .logo {
+    align-items: flex-start;
+  }
+
+  nav ul {
+    align-items: flex-start;
+    font-weight: var(--header_regular);
+  }
+
+  /* ----------------
+    FOOTER
+  ----------------- */
+
+  footer .logo {
+    grid-column: 2 / 4;
+  }
+
+  footer .logo h4 {
+    display: none;
+  }
+
+  footer .info {
+    grid-column: 2 / -2;
+  }
+
+  footer .info h2 {
+    letter-spacing: normal;
+    padding-bottom: 2%;
+  }
+
+  footer .info .so_me a {
+    padding-left: 3%;
+    width: 7%;
+  }
+
+  /* ----------------
+    HOME
+  ----------------- */
+
+  .home .info article {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .home .info img {
+    grid-column: 4 / -4;
+    grid-row: 1 / 2;
+    margin: 0 auto 10%;
   }
 
   /* --- skills section --- */
