@@ -527,21 +527,40 @@ form .cta_btn {
     FOOTER
   ----------------- */
 
+  footer .logo {
+    grid-column: 2 / 5;
+  }
+
   footer .logo img {
     max-width: 15vw;
   }
 
   footer .logo h4 {
+    font-size: var(--font_s);
     white-space: nowrap;
   }
 
   footer .info {
-    grid-column: 6 / -2;
+    grid-column: 5 / -2;
+  }
+
+  footer .info h2 {
+    font-size: var(--font_s);
+    font-weight: var(--header_regular);
+  }
+
+  footer .info .so_me {
+    padding-bottom: 2%;
   }
 
   footer .info .so_me a {
     padding-left: 5%;
-    width: 12%;
+    width: 10%;
+  }
+
+  footer .info .link {
+    font-weight: var(--main_font_light);
+    padding-bottom: 2%;
   }
 
   /* ----------------
@@ -573,5 +592,21 @@ form .cta_btn {
 
   .amount {
     border-radius: 0;
+  }
+
+  /* ----------------
+    CONTACT
+  ----------------- */
+
+  .contact .info {
+    margin: 8% auto 8%;
+  }
+
+  .contact .cta_txt {
+    padding: 3% 0 3%;
+  }
+
+  form {
+    margin: 8% auto 8%;
   }
 }

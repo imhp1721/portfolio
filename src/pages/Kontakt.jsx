@@ -26,10 +26,13 @@ function Kontakt() {
           <article>
             <h2>Praktikant i foråret 2025</h2>
             <p>
-              Jeg søger en praktikplads i nærheden af Aarhus med opgaver
-              indenfor frontend og/eller multimediedesign generelt. Tag gerne
-              kontakt, hvis ... noget med din virksomhed eller i den stil...
-              dunno...
+              Som praktikant håber jeg på at bidrage ved at løse opgaver inden
+              for frontend og multimediedesign. Jeg søger en mulighed for at
+              være en aktiv del af jeres team, deltage i problemløsning og
+              derigennem udvide mine færdigheder inden for faget. Jeg er klar
+              til at bringe kreative indspark til bordet og ser frem til både
+              udfordringer og læring. Tag gerne kontakt, hvis du er interesseret
+              i at samarbejde om spændende projekter.
             </p>
             <p className="cta_txt">
               Send en mail til
