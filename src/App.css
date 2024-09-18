@@ -149,6 +149,7 @@ h1 {
 
 nav {
   display: grid;
+  font-size: var(--nav_size);
   grid-template-columns: repeat(12, 1fr);
   position: sticky;
   top: 0;
@@ -174,7 +175,6 @@ nav .logo img {
 
 nav .logo h4 {
   color: var(--clr_light_bg);
-  font-size: var(--font_s);
   font-weight: var(--header_regular);
   padding-bottom: 5%;
 }
