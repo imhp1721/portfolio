@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import MarqueeFeature from "../components/MarqueeFeature";
-import { RandomBlob } from "react-random-shapes";
 import Footer from "../components/Footer";
 
 //FORSIDE
@@ -16,10 +15,10 @@ function Home() {
               Som multi&shy;medie&shy;design&shy;studerende med
               frontend-specialisering er jeg ikke blot teknisk, men også
               æstetisk orienteret. Jeg stræber efter at skabe designs, der både
-              er intuitive og appellerende for brugeren, samtidig med at de
-              er velfungerende og strukturerede i koden. Jeg har sans for at
-              skabe content, hvilket jeg praktiserer gennem mit studiejob, men
-              min sande passion ligger i at skabe harmoni mellem de tekniske og
+              er intuitive og appellerende for brugeren, samtidig med at de er
+              velfungerende og strukturerede i koden. Jeg har sans for at skabe
+              content, hvilket jeg praktiserer gennem mit studiejob, men min
+              sande passion ligger i at skabe harmoni mellem de tekniske og
               visuelle aspekter af mit fag.
             </p>
             <p className="cta_txt">
@@ -73,7 +72,11 @@ function Home() {
               Som det videbegærlige menneske, jeg er, vil jeg altid søge at
               tilegne mig ny viden og udvide mine faglige kompetencer.
             </p>
-            <RandomBlob size={400} className="blob" />
+            <img
+              className="blob"
+              src="src\assets\blobs\skills.svg"
+              alt="Blob"
+            />
           </article>
           <article className="design">
             <div className="skill">
