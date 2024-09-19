@@ -50,10 +50,10 @@ function Kontakt() {
               herunder.
             </p>
           </article>
-          <img src="src\assets\img\portrait.png" alt="Portrætfoto" />
+          <img src="/img/portrait.png" alt="Portrætfoto" />
         </section>
         <section>
-          <img src="src\assets\waves\transition.svg" alt="Wave" />
+          <img src="/img/waves/transition.svg" alt="Wave" />
         </section>
         <ContactForm />
       </main>

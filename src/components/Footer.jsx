@@ -20,11 +20,11 @@ function Footer() {
     <footer>
       <img
         className="wave"
-        src="src\assets\waves\footer.svg"
+        src="img/waves/footer.svg"
         alt="Wavy footer"
       />
       <Link to="/home" className="logo">
-        <img src="src\assets\img\logo.png" alt="im-press logo" />
+        <img src="/img/logo.png" alt="im-press logo" />
         <h4>im-press</h4>
       </Link>
       <section className="info">
@@ -36,16 +36,16 @@ function Footer() {
             }
             target="blank"
           >
-            <img src="src\assets\icons\linkedin.png" alt="LinkedIn logo" />
+            <img src="/img/icons/linkedin.png" alt="LinkedIn logo" />
           </Link>
           <Link to={"https://github.com/imhp1721"} target="blank">
-            <img src="src\assets\icons\github.png" alt="GitHub logo" />
+            <img src="/img/icons/github.png" alt="GitHub logo" />
           </Link>
           <Link to={"https://www.instagram.com/im_holt/"} target="blank">
-            <img src="src\assets\icons\ig.png" alt="Instagram logo" />
+            <img src="/img/icons/ig.png" alt="Instagram logo" />
           </Link>
           <Link to={"https://www.facebook.com/imhp1721"} target="blank">
-            <img src="src\assets\icons\fb.png" alt="Facebook logo" />
+            <img src="/img/icons/fb.png" alt="Facebook logo" />
           </Link>
         </div>
         <div className="link">

@@ -33,10 +33,10 @@ function Home() {
               </button>
             </div>
           </article>
-          <img src="src\assets\img\portrait.png" alt="Portrætfoto" />
+          <img src="/img/portrait.png" alt="Portrætfoto" />
         </section>
         <section className="feature">
-          <img src="src\assets\waves\feature.svg" alt="Wave" />
+          <img src="/img/waves/feature.svg" alt="Wave" />
           <MarqueeFeature />
         </section>
         <section className="skills">
@@ -74,7 +74,7 @@ function Home() {
             </p>
             <img
               className="blob"
-              src="src\assets\blobs\skills.svg"
+              src="/img/blobs/skills.svg"
               alt="Blob"
             />
           </article>
