@@ -5,7 +5,7 @@ function Navigation() {
     <>
       <section className="hero">
         <img
-          src="/img/hero.jpg"
+          src="src\assets\img\hero.jpg"
           alt="På hængebro i 40 meters højde i Ghana"
         />
         <h1>Inger-Margrethe Holt Povlsen</h1>
@@ -13,11 +13,11 @@ function Navigation() {
       <nav>
         <img
           className="wave"
-          src="/img/waves/navbar.svg"
+          src="src\assets\waves\navbar.svg"
           alt="Wavy navigation"
         />
         <Link to="/home" className="logo">
-          <img src="/img/logo.png" alt="im-press logo" />
+          <img src="src\assets\img\logo.png" alt="im-press logo" />
           <h4>im-press</h4>
         </Link>
         <ul>

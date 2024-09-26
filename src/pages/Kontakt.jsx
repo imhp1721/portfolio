@@ -21,7 +21,7 @@ function Kontakt() {
 
   return (
     <>
-      <main className="home contact">
+      <main className="contact">
         <section className="info">
           <article>
             <h2>Praktikant i foråret 2025</h2>
@@ -50,10 +50,10 @@ function Kontakt() {
               herunder.
             </p>
           </article>
-          <img src="/img/portrait.png" alt="Portrætfoto" />
+          <img src="src\assets\img\portrait.png" alt="Portrætfoto" />
         </section>
         <section>
-          <img src="/img/waves/transition.svg" alt="Wave" />
+          <img src="src\assets\waves\transition.svg" alt="Wave" />
         </section>
         <ContactForm />
       </main>
