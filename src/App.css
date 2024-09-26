@@ -201,7 +201,7 @@ nav li {
 }
 
 nav .logo:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 nav li:hover {
@@ -453,6 +453,7 @@ main .info {
 /* ----------------
   OM MIG
 ----------------- */
+
 .om_mig .info {
   position: relative;
 }
@@ -462,6 +463,7 @@ main .info {
   grid-row: 1 / -1;
   height: 100%;
   position: absolute;
+  transition: all 0.5s ease-in-out; /* Smooth transition over 0.5 seconds */
   z-index: 1;
 }
 
@@ -474,6 +476,20 @@ main .info {
 .om_mig .info article {
   grid-column: 7 / -1;
   grid-row: 1 / -1;
+}
+
+/* --- timeline section --- */
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 8% 0;
+}
+
+.timeline .wave {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  max-height: 50vh;
 }
 
 /* ----------------
