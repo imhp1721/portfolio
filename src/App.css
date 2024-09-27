@@ -336,7 +336,7 @@ main .info {
   grid-row: 1 / 2;
 }
 
-.feature .marquee {
+.marquee {
   --marquee_duration: 45s;
   --word_amount: 17;
   align-items: center;
@@ -369,114 +369,6 @@ main .info {
   position: absolute;
   text-align: center;
   width: 230px;
-}
-
-.word1 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 1) * -1
-  );
-}
-
-.word2 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 2) * -1
-  );
-}
-
-.word3 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 3) * -1
-  );
-}
-
-.word4 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 4) * -1
-  );
-}
-
-.word5 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 5) * -1
-  );
-}
-
-.word6 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 6) * -1
-  );
-}
-
-.word7 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 7) * -1
-  );
-}
-
-.word8 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 8) * -1
-  );
-}
-
-.word9 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 9) * -1
-  );
-}
-
-.word1 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 1) * -1
-  );
-}
-
-.word10 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 10) * -1
-  );
-}
-
-.word11 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 11) * -1
-  );
-}
-
-.word12 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 12) * -1
-  );
-}
-
-.word13 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 13) * -1
-  );
-}
-
-.word14 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 14) * -1
-  );
-}
-
-.word15 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 15) * -1
-  );
-}
-
-.word16 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 16) * -1
-  );
-}
-
-.word17 {
-  animation-delay: calc(
-    var(--marquee_duration) / var(--word_amount) * (var(--word_amount) - 17) * -1
-  );
 }
 
 /* --- skills section --- */

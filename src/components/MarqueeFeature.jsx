@@ -1,24 +1,42 @@
+const words = [
+  "kreativ",
+  "organiseret",
+  "ansvarsfuld",
+  "entusiastisk",
+  "detaljeorienteret",
+  "ambitiøs",
+  "hjælpsom",
+  "pålidelig",
+  "imødekommende",
+  "energisk",
+  "praktisk",
+  "systematisk",
+  "løsningsorienteret",
+  "perfektionistisk",
+  "vedholdende",
+  "omsorgsfuld",
+  "reflekterende",
+];
+
 const MarqueeFeature = () => {
+  const marqueeDuration = "45s";
+  const wordAmount = words.length;
 
   return (
     <section className="marquee">
-      <p className="word word1">kreativ</p>
-      <p className="word word2">organiseret</p>
-      <p className="word word3">ansvarsfuld</p>
-      <p className="word word4">entusiastisk</p>
-      <p className="word word5">detaljeorienteret</p>
-      <p className="word word6">ambitiøs</p>
-      <p className="word word7">hjælpsom</p>
-      <p className="word word8">pålidelig</p>
-      <p className="word word9">imødekommende</p>
-      <p className="word word10">energisk</p>
-      <p className="word word11">praktisk</p>
-      <p className="word word12">systematisk</p>
-      <p className="word word13">løsningsorienteret</p>
-      <p className="word word14">perfektionistisk</p>
-      <p className="word word15">vedholdende</p>
-      <p className="word word16">omsorgsfuld</p>
-      <p className="word word17">reflekterende</p>
+      {words.map((word, index) => (
+        <p
+          key={`word${index}`}
+          className={`word word${index + 1}`}
+          style={{
+            animationDelay: `calc(${marqueeDuration} / ${wordAmount} * (${
+              wordAmount - index - 1
+            }) * -1)`,
+          }}
+        >
+          {word}
+        </p>
+      ))}
     </section>
   );
 };
