@@ -337,8 +337,6 @@ main .info {
 }
 
 .marquee {
-  --marquee_duration: 45s;
-  --word_amount: 17;
   align-items: center;
   display: flex;
   grid-column: 1 / -1;
@@ -356,16 +354,13 @@ main .info {
 }
 
 .word {
-  animation-name: move_marquee;
-  animation-duration: var(--marquee_duration);
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: move_marquee 50s linear infinite;
   background-color: var(--clr_light1);
   border-radius: 5px;
   color: var(--clr_dark1);
   font-weight: var(--main_font_bold);
-  left: calc(250px * var(--word_amount));
-  padding: 0.5% 1%;
+  left: calc(250px * 17); /* width of each word * amount of words */
+  padding: 0.5% 0;
   position: absolute;
   text-align: center;
   width: 230px;
@@ -632,6 +627,14 @@ form .cta_btn {
     grid-column: 9 / -1;
   }
 
+  /* --- marquee feature --- */
+
+  .word {
+    left: calc(200px * 17); /* width of each word * amount of words */
+    padding: 0.25% 0;
+    width: 180px;
+  }
+
   /* --- skills section --- */
 
   .skills .quote p {
@@ -764,7 +767,8 @@ form .cta_btn {
   .word {
     border-radius: 3px;
     font-weight: var(--main_font_medium);
-    padding: 0% 1%;
+    left: calc(160px * 17); /* width of each word * amount of words */
+    width: 150px;
   }
 
   /* --- skills section --- */
