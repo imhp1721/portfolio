@@ -616,16 +616,20 @@ form .cta_btn {
   }
 
   /* ----------------
-    HOME
+    MAIN
   ----------------- */
 
-  .home .info article {
+  .info article {
     grid-column: 1 / 8;
   }
 
-  .home .info img {
+  .info img {
     grid-column: 9 / -1;
   }
+
+  /* ----------------
+    HOME
+  ----------------- */
 
   /* --- marquee feature --- */
 
@@ -740,23 +744,27 @@ form .cta_btn {
   }
 
   /* ----------------
-    HOME
+    MAIN
   ----------------- */
 
-  .home .info {
+  main .info {
     width: 80%;
   }
 
-  .home .info article {
+  .info article {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
 
-  .home .info img {
+  .info img {
     grid-column: 4 / -4;
     grid-row: 1 / 2;
     margin: 0 auto 10%;
   }
+
+  /* ----------------
+    HOME
+  ----------------- */
 
   /* --- marquee feature --- */
 
