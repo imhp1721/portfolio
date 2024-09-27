@@ -36,7 +36,7 @@ function Home() {
           <img src="src\assets\img\portrait.png" alt="Portrætfoto" />
         </section>
         <section className="feature">
-          <img src="src\assets\waves\feature.svg" alt="Wave" />
+          <img className="wave" src="src\assets\waves\feature.svg" alt="Wave" />
           <MarqueeFeature />
         </section>
         <section className="skills">
