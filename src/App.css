@@ -73,7 +73,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4, 
+h5 {
   font-family: var(--header_font);
 }
 
@@ -81,7 +82,8 @@ button,
 p,
 label,
 input,
-textarea {
+textarea,
+h6 {
   font-family: var(--main_font);
   font-size: var(--font_s);
 }
@@ -464,7 +466,7 @@ main .info {
 }
 
 .om_mig .info .full_fig_img {
-  grid-column: 2 / 5;
+  grid-column: 2 / 4;
   grid-row: 1 / -1;
   height: 100%;
   position: absolute;
@@ -473,13 +475,13 @@ main .info {
 }
 
 .om_mig .info .blob {
-  grid-column: 1 / 6;
+  grid-column: 1 / 5;
   grid-row: 1 / -1;
   margin: 25% 0;
 }
 
 .om_mig .info article {
-  grid-column: 7 / -1;
+  grid-column: 6 / -1;
   grid-row: 1 / -1;
 }
 
@@ -488,13 +490,91 @@ main .info {
 .timeline {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 8% 0;
+  grid-template-rows: repeat(11, 1fr);
 }
 
 .timeline .wave {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  max-height: 50vh;
+}
+
+.timeline article {
+  position: relative;
+}
+
+.ed_txt {
+  color: var(--clr_dark1);
+  left: 10%;
+  line-height: 175%;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+
+.year_txt {
+  color: var(--clr_light_bg);
+  font-size: var(--font_s);
+  font-weight: var(--header_extrabold);
+  text-align: center;
+}
+
+.mdu,
+.intern {
+  align-self: end;
+  grid-row: 2 / 6;
+}
+
+.mdu .year_txt,
+.intern .year_txt {
+  padding-top: 10%;
+}
+
+.mdu {
+  grid-column: 4 / 7;
+}
+
+.mdu .ed_txt {
+  top: 20%;
+}
+
+.intern {
+  grid-column: 9 / 12;
+}
+
+.intern .ed_txt {
+  top: 35%;
+}
+
+.arrow {
+  align-self: center;
+  grid-column: 1 / -2;
+  grid-row: 6 / -6;
+}
+
+.hf,
+.ida {
+  grid-row: 7 / 11;
+}
+
+.hf .year_txt,
+.ida .year_txt {
+  padding-bottom: 10%;
+}
+
+.hf {
+  grid-column: 2 / 5;
+}
+
+.hf .ed_txt {
+  top: 35%;
+}
+
+.ida {
+  grid-column: 7 / 10;
+}
+
+.ida .ed_txt {
+  top: 30%;
 }
 
 /* ----------------

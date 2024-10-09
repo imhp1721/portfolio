@@ -47,8 +47,39 @@ function OmMig() {
           <img
             className="wave"
             src="src\assets\waves\timeline.svg"
-            alt="Wave"
+            alt="wave"
           />
+          <article className="mdu">
+            <img className="blob" src="src\assets\blobs\mdu.svg" alt="blob" />
+            <h6 className="ed_txt">
+              Multimediedesign på Erhvervsakademi Aarhus
+            </h6>
+            <h5 className="year_txt">2023-2025</h5>
+          </article>
+          <article className="intern">
+            <img
+              className="blob"
+              src="src\assets\blobs\intern.svg"
+              alt="blob"
+            />
+            <h6 className="ed_txt">Multimediedesign-praktikant</h6>
+            <h5 className="year_txt">forår 2025</h5>
+          </article>
+          <img
+            className="arrow"
+            src="src\assets\icons\arrow.svg"
+            alt="arrow timeline"
+          />
+          <article className="hf">
+            <h5 className="year_txt">2021-2023</h5>
+            <img className="blob" src="src\assets\blobs\hf.svg" alt="blob" />
+            <h6 className="ed_txt">HF ARTS på Aarhus Akademi</h6>
+          </article>
+          <article className="ida">
+            <h5 className="year_txt">2024-</h5>
+            <img className="blob" src="src\assets\blobs\ida.svg" alt="blob" />
+            <h6 className="ed_txt">Studentermedhjælper i IDA Lederforum</h6>
+          </article>
         </section>
         <section className="interests">
           <h2>Mine større kreative projekter</h2>
