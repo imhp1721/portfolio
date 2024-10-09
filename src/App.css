@@ -354,7 +354,7 @@ main .info {
 }
 
 .word {
-  animation: move_marquee 50s linear infinite;
+  animation: move_marquee 60s linear infinite;
   background-color: var(--clr_light1);
   border-radius: 5px;
   color: var(--clr_dark1);

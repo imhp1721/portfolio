@@ -3,8 +3,8 @@ import seriousImage from "../assets/img/serious.png";
 import laughImage from "../assets/img/laugh.png";
 
 const MakeMeLaugh = () => {
-  const [currentImage, setCurrentImage] = useState(seriousImage);
-  const [opacity, setOpacity] = useState(1);
+  const [currentImage, setCurrentImage] = useState();
+  const [opacity, setOpacity] = useState();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,8 +14,8 @@ const MakeMeLaugh = () => {
           current === seriousImage ? laughImage : seriousImage
         );
         setOpacity(1); // Fade in the new image
-      }, 500);
-    }, 4000); // Change image every 4 seconds (4000 milliseconds)
+      }, 400);
+    }, 3500); // Change image every 3,5 seconds (3500 milliseconds)
 
     return () => clearInterval(interval);
   }, []);

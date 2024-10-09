@@ -19,7 +19,7 @@ const words = [
 ];
 
 const MarqueeFeature = () => {
-  const marqueeDuration = "50s";
+  const marqueeDuration = "60s";
   const wordAmount = words.length;
 
   return (
