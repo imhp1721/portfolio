@@ -3,7 +3,7 @@ import seriousImage from "../assets/img/serious.png";
 import laughImage from "../assets/img/laugh.png";
 
 const MakeMeLaugh = () => {
-  const [currentImage, setCurrentImage] = useState();
+  const [currentImage, setCurrentImage] = useState(seriousImage);
   const [opacity, setOpacity] = useState();
 
   useEffect(() => {
