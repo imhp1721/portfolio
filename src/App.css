@@ -48,6 +48,10 @@ body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   object-fit: contain;
 }
@@ -216,7 +220,7 @@ nav li {
 .active {
   font-weight: var(--header_extrabold);
   text-decoration: underline solid 10%;
-  text-underline-offset: .2rem;
+  text-underline-offset: 0.2rem;
 }
 
 nav .logo:hover {
@@ -469,11 +473,12 @@ main .info {
   width: 67%;
 }
 
-/* -------------------------------------------------------
+/* --------------------------------------------------------------------------
   OM MIG
--------------------------------------------------------- */
+--------------------------------------------------------------------------- */
 
 .om_mig .info {
+  margin: 5% auto 10%;
   position: relative;
 }
 
@@ -501,26 +506,14 @@ main .info {
 
 .timeline {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 10dvw repeat(12, 1fr) 10dvw;
   grid-template-rows: repeat(11, 1fr);
 }
 
 .timeline .wave {
+  align-self: center;
   grid-column: 1 / -1;
-  grid-row: 1 / -1;
-}
-
-.timeline article {
-  position: relative;
-}
-
-.ed_txt {
-  color: var(--clr_dark1);
-  left: 10%;
-  line-height: 175%;
-  position: absolute;
-  text-align: center;
-  width: 80%;
+  grid-row: 1 / 12;
 }
 
 .year_txt {
@@ -532,29 +525,22 @@ main .info {
 
 .mdu,
 .intern {
-  align-self: end;
-  grid-row: 2 / 6;
+  grid-row: 3 / 7;
+  justify-self: center;
+  width: 90%;
 }
 
 .mdu .year_txt,
 .intern .year_txt {
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .mdu {
-  grid-column: 4 / 7;
-}
-
-.mdu .ed_txt {
-  top: 20%;
+  grid-column: 5 / 8;
 }
 
 .intern {
-  grid-column: 9 / 12;
-}
-
-.intern .ed_txt {
-  top: 35%;
+  grid-column: 10 / 13;
 }
 
 .arrow {
@@ -565,28 +551,76 @@ main .info {
 
 .hf,
 .ida {
-  grid-row: 7 / 11;
+  align-self: end;
+  grid-row: 6 / 10;
+  justify-self: center;
+  width: 67%;
 }
 
 .hf .year_txt,
 .ida .year_txt {
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .hf {
-  grid-column: 2 / 5;
-}
-
-.hf .ed_txt {
-  top: 35%;
+  grid-column: 2 / 6;
 }
 
 .ida {
-  grid-column: 7 / 10;
+  grid-column: 7 / 11;
 }
 
-.ida .ed_txt {
-  top: 30%;
+/* ------ hobby section ------------------------------- */
+
+.hobby {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 10% auto;
+  max-width: 1200px;
+  width: 80%;
+}
+
+.hobby h2,
+.hobby h3,
+.hobby p {
+  grid-column: 1 / -1;
+}
+
+/* ------ image carousel -------------- */
+
+.img_carousel {
+  grid-column: 1 / -1;
+  margin-bottom: 5%;
+}
+
+.img_carousel .txt {
+  justify-self: end;
+  width: 25%;
+}
+
+.img_carousel .txt h4,
+.img_carousel .txt p {
+  text-align: right;
+}
+
+/* ------ image collage -------------- */
+
+.img_collage {
+  align-items: center;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-gap: 1.2dvw;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3dvw;
+}
+
+.img_collage div img {
+  border-radius: 5px;
+}
+
+.img_collage div img:not(:last-child) {
+  margin-bottom: 1dvw;
 }
 
 /* ----------------------------------------------------------------------------
@@ -639,7 +673,7 @@ form textarea::placeholder {
 
 form .cta_btn {
   margin: 1% 0 2%;
-  padding: .75% 1.5%;
+  padding: 0.75% 1.5%;
   text-align: center;
 }
 

@@ -10,6 +10,8 @@ import internBlob from "../assets/blobs/intern.svg";
 import arrow from "../assets/icons/arrow.svg";
 import hfBlob from "../assets/blobs/hf.svg";
 import idaBlob from "../assets/blobs/ida.svg";
+import ImageCarousel from "../components/ImageCarousel";
+import ImageCollage from "../components/ImageCollage";
 
 //OM MIG
 
@@ -40,7 +42,7 @@ function OmMig() {
             </p>
             <div>
               <button className="cta_btn">
-                <Link to={"#"}>Fritidsprojekter</Link>
+                <a href="#hobby">Fritidsprojekter</a>
               </button>
               <button className="cta_btn">
                 <Link to={"/projekter"}>Studieprojekter</Link>
@@ -52,27 +54,28 @@ function OmMig() {
           <img className="wave" src={wave} alt="wave" />
           <article className="mdu">
             <img className="blob" src={mduBlob} alt="blob" />
-            <h6 className="ed_txt">
-              Multimediedesign på Erhvervsakademi Aarhus
-            </h6>
             <h5 className="year_txt">2023-2025</h5>
           </article>
           <article className="intern">
             <img className="blob" src={internBlob} alt="blob" />
-            <h6 className="ed_txt">Multimediedesign-praktikant</h6>
             <h5 className="year_txt">forår 2025</h5>
           </article>
           <img className="arrow" src={arrow} alt="arrow timeline" />
           <article className="hf">
             <h5 className="year_txt">2021-2023</h5>
             <img className="blob" src={hfBlob} alt="blob" />
-            <h6 className="ed_txt">HF ARTS på Aarhus Akademi</h6>
           </article>
           <article className="ida">
             <h5 className="year_txt">2024-</h5>
             <img className="blob" src={idaBlob} alt="blob" />
-            <h6 className="ed_txt">Studentermedhjælper i IDA Lederforum</h6>
           </article>
+        </section>
+        <section id="hobby" className="hobby">
+          <h2>Mine fritidsinteresser</h2>
+          <ImageCarousel />
+          <h3>Håndarbejde, kunsthåndværk & upcycling</h3>
+          <p>Sy - Akvarel - Hækling - Tegning - Smykker - Bolig - Strik</p>
+          <ImageCollage />
         </section>
       </main>
     </>
