@@ -33,9 +33,9 @@
   --font_l: clamp(2.2rem, 3.2vw, 3.5rem);
 }
 
-/* ------------------------
+/* -----------------------------------------------
   GENERAL STYLING
-------------------------- */
+----------------------------------------------- */
 
 *,
 html,
@@ -54,6 +54,7 @@ img {
 
 a {
   color: inherit;
+  line-height: 175%;
   text-decoration: none;
 }
 
@@ -62,6 +63,7 @@ li {
   font-family: var(--header_font);
   font-size: var(--nav_size);
   font-weight: var(--header_bold);
+  line-height: 175%;
   list-style: none;
 }
 
@@ -76,6 +78,7 @@ h3,
 h4, 
 h5 {
   font-family: var(--header_font);
+  line-height: 175%;
 }
 
 button,
@@ -114,9 +117,9 @@ h2 {
   width: fit-content;
 }
 
-/* ----------------
+/* --------------------------------------------------
   HERO SECTION
------------------ */
+--------------------------------------------------- */
 
 h1 {
   color: var(--clr_light_bg);
@@ -142,14 +145,14 @@ h1 {
   object-fit: cover;
 }
 
-/* ----------------
+/* --------------------------------------------------------
   NAVIGATION
------------------ */
+-------------------------------------------------------- */
 
 nav {
   display: grid;
   font-size: var(--nav_size);
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 10dvw repeat(12, 1fr) 10dvw;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -165,17 +168,20 @@ nav .logo {
   display: flex;
   grid-column: 2 / 5;
   grid-row: 1 / 2;
+  padding-top: 5%;
+  transform: scale(1);
+  transition: all .2s ease-in-out;
 }
 
 nav .logo img {
-  max-width: 9vw;
+  max-width: 7.5vw;
   width: 55%;
 }
 
 nav .logo h4 {
   color: var(--clr_light_bg);
   font-weight: var(--header_regular);
-  padding-bottom: 5%;
+  padding-bottom: 15%;
 }
 
 nav ul {
@@ -195,37 +201,34 @@ nav ul {
 
 nav li {
   height: fit-content;
+  transform: scale(1);
+  transition: all .2s ease-in-out;
   width: fit-content;
 }
 
 .active {
+  font-weight: var(--header_extrabold);
   text-decoration: underline;
 }
 
 nav .logo:hover {
-  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 nav li:hover {
   color: var(--clr_cta);
+  transform: scale(1.1);
 }
 
-/* remove reduced opacity on mobile */
-nav .logo:focus-within,
-nav li:focus-within {
-  opacity: 1;
-}
-
-/* ----------------
+/* ------------------------------------------------------
   FOOTER
------------------ */
+------------------------------------------------------- */
 
 footer {
   align-items: end;
   display: grid;
   font-family: var(--main_font);
-  font-size: var(--font_m);
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 10dvw repeat(12, 1fr) 10dvw;
 }
 
 footer .wave {
@@ -236,24 +239,26 @@ footer .wave {
 
 footer .logo {
   display: flex;
-  grid-column: 2 / 6;
+  font-size: var(--font_m);
+  grid-column: 2 / 7;
   grid-row: 1 / 2;
 }
 
 footer .logo img {
   transform: translateY(2%);
-  max-width: 20vw;
+  max-width: 17.5vw;
 }
 
 footer .logo h4 {
-  align-self: center;
   color: var(--clr_light_bg);
   font-weight: var(--header_regular);
+  padding-top: 15%;
 }
 
 footer .info {
   grid-column: 6 / -2;
   grid-row: 1 / 2;
+  padding-bottom: 3%;
   text-align: right;
 }
 
@@ -265,7 +270,7 @@ footer .info h2 {
 footer .info .so_me {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 4%;
+  padding-bottom: 3%;
 }
 
 footer .info .so_me a {
@@ -277,7 +282,7 @@ footer .info .link {
   color: var(--clr_light_bg);
   font-size: var(--font_s);
   letter-spacing: 0.2rem;
-  padding-bottom: 4%;
+  padding-bottom: 2%;
 }
 
 footer .copy {
@@ -295,9 +300,9 @@ footer .copy p {
   text-align: right;
 }
 
-/* ----------------
+/* ---------------------------------------------------------
   MAIN
------------------ */
+--------------------------------------------------------- */
 
 main .info {
   align-items: center;
@@ -321,11 +326,11 @@ main .info {
   grid-column: 8 / -1;
 }
 
-/* ----------------
+/* ---------------------------------------------------------
   HOME
------------------ */
+--------------------------------------------------------- */
 
-/* --- marquee feature --- */
+/* -------------- marquee feature --------------------- */
 
 .feature {
   align-items: center;
@@ -368,7 +373,7 @@ main .info {
   width: 230px;
 }
 
-/* --- skills section --- */
+/* ------------- skills section ----------------------- */
 
 .skills {
   align-items: center;
@@ -457,9 +462,9 @@ main .info {
   width: 67%;
 }
 
-/* ----------------
+/* -------------------------------------------------------
   OM MIG
------------------ */
+-------------------------------------------------------- */
 
 .om_mig .info {
   position: relative;
@@ -485,7 +490,7 @@ main .info {
   grid-row: 1 / -1;
 }
 
-/* --- timeline section --- */
+/* ------ timeline section ------------------------------- */
 
 .timeline {
   display: grid;
@@ -577,12 +582,20 @@ main .info {
   top: 30%;
 }
 
-/* ----------------
+/* -----------------------------------------------------
   CONTACT
------------------ */
+----------------------------------------------------- */
 
 .contact .info {
   margin: 8% auto 3%;
+}
+
+.contact .info article {
+  grid-column: 6 / -1;
+}
+
+.contact .info img {
+  grid-column: 1 / 5;
 }
 
 form {

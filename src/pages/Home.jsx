@@ -1,12 +1,24 @@
 import { Link } from "react-router-dom";
 import MarqueeFeature from "../components/MarqueeFeature";
-import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+
+//img imports
+
+import heroImg from "../assets/img/hero.jpg";
+import portrait from "../assets/img/portrait.png";
+import wave from "../assets/waves/marquee.svg";
+import blob from "../assets/blobs/skills.svg";
 
 //FORSIDE
 
 function Home() {
   return (
     <>
+      <section className="hero">
+        <img src={heroImg} alt="På hængebro i 40 meters højde i Ghana" />
+        <h1>Inger-Margrethe Holt Povlsen</h1>
+      </section>
+      <Nav />
       <main className="home">
         <section className="info">
           <article>
@@ -33,10 +45,10 @@ function Home() {
               </button>
             </div>
           </article>
-          <img src="src\assets\img\portrait.png" alt="Portrætfoto" />
+          <img src={portrait} alt="Portrætfoto" />
         </section>
         <section className="feature">
-          <img className="wave" src="src\assets\waves\feature.svg" alt="Wave" />
+          <img className="wave" src={wave} alt="Wave" />
           <MarqueeFeature />
         </section>
         <section className="skills">
@@ -72,11 +84,7 @@ function Home() {
               Som det videbegærlige menneske, jeg er, vil jeg altid søge at
               tilegne mig ny viden og udvide mine faglige kompetencer.
             </p>
-            <img
-              className="blob"
-              src="src\assets\blobs\skills.svg"
-              alt="Blob"
-            />
+            <img className="blob" src={blob} alt="Blob" />
           </article>
           <article className="design">
             <div className="skill">
@@ -106,7 +114,6 @@ function Home() {
           </article>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

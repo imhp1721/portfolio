@@ -1,20 +1,25 @@
 import { Link } from "react-router-dom";
 import MakeMeLaugh from "../components/MakeMeLaugh";
-import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+
+//img imports
+
+import wave from "../assets/waves/timeline.svg";
+import mduBlob from "../assets/blobs/mdu.svg";
+import internBlob from "../assets/blobs/intern.svg";
+import arrow from "../assets/icons/arrow.svg";
+import hfBlob from "../assets/blobs/hf.svg";
+import idaBlob from "../assets/blobs/ida.svg";
 
 //OM MIG
 
 function OmMig() {
   return (
     <>
+      <Nav />
       <main className="om_mig">
         <section className="info">
           <MakeMeLaugh />
-          <img
-            className="blob"
-            src="src\assets\blobs\om_mig_info.svg"
-            alt="blob"
-          />
           <article>
             <h2>Jeg fylder mit liv med kreativitet</h2>
             <p>
@@ -44,51 +49,32 @@ function OmMig() {
           </article>
         </section>
         <section className="timeline">
-          <img
-            className="wave"
-            src="src\assets\waves\timeline.svg"
-            alt="wave"
-          />
+          <img className="wave" src={wave} alt="wave" />
           <article className="mdu">
-            <img className="blob" src="src\assets\blobs\mdu.svg" alt="blob" />
+            <img className="blob" src={mduBlob} alt="blob" />
             <h6 className="ed_txt">
               Multimediedesign på Erhvervsakademi Aarhus
             </h6>
             <h5 className="year_txt">2023-2025</h5>
           </article>
           <article className="intern">
-            <img
-              className="blob"
-              src="src\assets\blobs\intern.svg"
-              alt="blob"
-            />
+            <img className="blob" src={internBlob} alt="blob" />
             <h6 className="ed_txt">Multimediedesign-praktikant</h6>
             <h5 className="year_txt">forår 2025</h5>
           </article>
-          <img
-            className="arrow"
-            src="src\assets\icons\arrow.svg"
-            alt="arrow timeline"
-          />
+          <img className="arrow" src={arrow} alt="arrow timeline" />
           <article className="hf">
             <h5 className="year_txt">2021-2023</h5>
-            <img className="blob" src="src\assets\blobs\hf.svg" alt="blob" />
+            <img className="blob" src={hfBlob} alt="blob" />
             <h6 className="ed_txt">HF ARTS på Aarhus Akademi</h6>
           </article>
           <article className="ida">
             <h5 className="year_txt">2024-</h5>
-            <img className="blob" src="src\assets\blobs\ida.svg" alt="blob" />
+            <img className="blob" src={idaBlob} alt="blob" />
             <h6 className="ed_txt">Studentermedhjælper i IDA Lederforum</h6>
           </article>
         </section>
-        <section className="interests">
-          <h2>Mine større kreative projekter</h2>
-        </section>
-        <section className="hobby">
-          <h2>Mine mindre fritidsprojekter</h2>
-        </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
+
+//img imports
+
 import seriousImage from "../assets/img/serious.png";
 import laughImage from "../assets/img/laugh.png";
+import blob from "../assets/blobs/om_mig_info.svg";
+
+//CHANGE IMAGE
 
 const MakeMeLaugh = () => {
   const [currentImage, setCurrentImage] = useState(seriousImage);
@@ -21,12 +27,15 @@ const MakeMeLaugh = () => {
   }, []);
 
   return (
-    <img
-      src={currentImage}
-      alt="Portræt i fuld figur"
-      className="full_fig_img"
-      style={{ opacity: opacity }}
-    />
+    <>
+      <img
+        src={currentImage}
+        alt="Portræt i fuld figur"
+        className="full_fig_img"
+        style={{ opacity: opacity }}
+      />
+      <img className="blob" src={blob} />
+    </>
   );
 };
 

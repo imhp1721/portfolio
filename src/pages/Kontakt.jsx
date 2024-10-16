@@ -1,6 +1,11 @@
 /* eslint-disable react/prop-types */
 import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+
+//img imports
+
+import portrait from "../assets/img/portrait.png";
+import wave from "../assets/waves/transition.svg";
 
 //KONTAKT
 
@@ -21,8 +26,10 @@ function Kontakt() {
 
   return (
     <>
+      <Nav />
       <main className="contact">
         <section className="info">
+          <img src={portrait} alt="Portrætfoto" />
           <article>
             <h2>Praktikant i foråret 2025</h2>
             <p>
@@ -50,14 +57,12 @@ function Kontakt() {
               herunder.
             </p>
           </article>
-          <img src="src\assets\img\portrait.png" alt="Portrætfoto" />
         </section>
         <section>
-          <img src="src\assets\waves\transition.svg" alt="Wave" />
+          <img src={wave} alt="Wave" />
         </section>
         <ContactForm />
       </main>
-      <Footer />
     </>
   );
 }
