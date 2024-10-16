@@ -215,7 +215,8 @@ nav li {
 
 .active {
   font-weight: var(--header_extrabold);
-  text-decoration: underline;
+  text-decoration: underline solid 10%;
+  text-underline-offset: .2rem;
 }
 
 nav .logo:hover {
@@ -588,12 +589,12 @@ main .info {
   top: 30%;
 }
 
-/* -----------------------------------------------------
+/* ----------------------------------------------------------------------------
   CONTACT
------------------------------------------------------ */
+---------------------------------------------------------------------------- */
 
 .contact .info {
-  margin: 8% auto 3%;
+  margin: 10% auto 5%;
 }
 
 .contact .info article {
@@ -608,9 +609,9 @@ form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 5% auto 8%;
+  margin: 8% auto 10%;
   max-width: 1200px;
-  width: 90%;
+  width: 80%;
 }
 
 form input,
@@ -625,7 +626,7 @@ form textarea {
 }
 
 form textarea {
-  height: 20vh;
+  height: 20dvh;
   resize: none;
 }
 
@@ -633,17 +634,19 @@ form input::placeholder,
 form textarea::placeholder {
   font-family: var(--main_font);
   font-size: var(--font_s);
-  font-weight: var(--main_font_thin);
+  font-weight: var(--main_font_light);
 }
 
 form .cta_btn {
   margin: 1% 0 2%;
-  padding: 1% 2%;
+  padding: .75% 1.5%;
   text-align: center;
 }
+
 /* ------------------------------------------------------------------------
   EXTRA LARGE SCREENS
 -------------------------------------------------------------------------- */
+
 @media only screen and (min-width: 1200px) {
   .skills .quote p {
     font-size: var(--nav_size);

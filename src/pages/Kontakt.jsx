@@ -38,8 +38,11 @@ function Kontakt() {
               være en aktiv del af jeres team, deltage i problemløsning og
               derigennem udvide mine færdigheder inden for faget. Jeg er klar
               til at bringe kreative indspark til bordet og ser frem til både
-              udfordringer og læring. Tag gerne kontakt, hvis du er interesseret
-              i at samarbejde om spændende projekter.
+              udfordringer og læring.
+            </p>
+            <p>
+              Tag gerne kontakt, hvis du er interesseret i at samarbejde om
+              spændende projekter.
             </p>
             <p className="cta_txt">
               Send en mail til
