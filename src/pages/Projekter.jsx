@@ -16,8 +16,8 @@ function Projekter() {
       <Nav />
       <main className="projects">
         <section className="info">
+          <h2>Projekter på multi&shy;medie&shy;design&shy;uddannelsen</h2>
           <article>
-            <h2>Projekter på multi&shy;medie&shy;design&shy;uddannelsen</h2>
             <p>
               På multimediedesignuddannelsen kombineres teori og praksis i
               projekter, hvor vi løser virkelighedsnære problemstillinger både
@@ -40,14 +40,14 @@ function Projekter() {
           </article>
           <div>
             <img
-              className="interactive"
-              src={interactive}
-              alt="Forsiden til 'Opskrift på en Stjerne'"
-            />
-            <img
               className="sem2_exam"
               src={sem2Exam}
               alt="Forsiden til 'Motorcykeleventyr'"
+            />
+            <img
+              className="interactive"
+              src={interactive}
+              alt="Forsiden til 'Opskrift på en Stjerne'"
             />
             <img
               className="sem1_exam"
