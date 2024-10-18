@@ -20,7 +20,7 @@ function Home() {
       </section>
       <Nav />
       <main className="home">
-        <section className="info">
+        <section className="info txt_left main_grid">
           <article>
             <h2>Designbevidst frontend udvikler</h2>
             <p>
@@ -38,26 +38,26 @@ function Home() {
             <p className="cta_txt">
               Jeg søger praktikplads fra 6. januar 2025.
             </p>
-            <div>
-              <button className="cta_btn">
-                <Link reloadDocument to={"/kontakt"}>
-                  Kontakt mig
-                </Link>
-              </button>
+            <div className="buttons">
               <button className="cta_btn">
                 <Link reloadDocument to={"/projekter"}>
                   Se mine projekter
+                </Link>
+              </button>
+              <button className="cta_btn">
+                <Link reloadDocument to={"/kontakt"}>
+                  Kontakt mig
                 </Link>
               </button>
             </div>
           </article>
           <img src={portrait} alt="Portrætfoto" />
         </section>
-        <section className="feature">
+        <section className="feature grid_w_wave">
           <img className="wave" src={wave} alt="Wave" />
           <MarqueeFeature />
         </section>
-        <section className="skills">
+        <section className="skills main_grid">
           <h2>Multimediedesigner i evig udvikling</h2>
           <article className="frontend">
             <div className="skill">

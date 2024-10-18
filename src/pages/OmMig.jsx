@@ -21,7 +21,7 @@ function OmMig() {
     <>
       <Nav />
       <main className="om_mig">
-        <section className="info">
+        <section className="info txt_right main_grid">
           <MakeMeLaugh />
           <article>
             <h2>Jeg fylder mit liv med kreativitet</h2>
@@ -41,7 +41,7 @@ function OmMig() {
             <p className="cta_txt">
               Du kan se nogle af mine kreative projekter her.
             </p>
-            <div>
+            <div className="buttons">
               <button className="cta_btn scroll">
                 <a href="#hobby">Fritidsprojekter</a>
                 <img src={scrollArrow} alt="Pil nedad" />
@@ -54,27 +54,27 @@ function OmMig() {
             </div>
           </article>
         </section>
-        <section className="timeline">
+        <section className="timeline grid_w_wave">
           <img className="wave" src={wave} alt="wave" />
-          <article className="mdu">
+          <div className="mdu">
             <img className="blob" src={mduBlob} alt="blob" />
             <h5 className="year_txt">2023-2025</h5>
-          </article>
-          <article className="intern">
+          </div>
+          <div className="intern">
             <img className="blob" src={internBlob} alt="blob" />
             <h5 className="year_txt">forår 2025</h5>
-          </article>
+          </div>
           <img className="arrow" src={arrow} alt="arrow timeline" />
-          <article className="hf">
+          <div className="hf">
             <h5 className="year_txt">2021-2023</h5>
             <img className="blob" src={hfBlob} alt="blob" />
-          </article>
-          <article className="ida">
+          </div>
+          <div className="ida">
             <h5 className="year_txt">2024-</h5>
             <img className="blob" src={idaBlob} alt="blob" />
-          </article>
+          </div>
         </section>
-        <section id="hobby" className="hobby">
+        <section id="hobby" className="hobby main_grid">
           <h2>Mine fritidsinteresser</h2>
           <ImageCarousel />
           <h3>Håndarbejde, kunsthåndværk & upcycling</h3>

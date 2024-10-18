@@ -28,7 +28,7 @@ function Footer() {
   };
 
   return (
-    <footer>
+    <footer className="grid_w_wave">
       <img className="wave" src={wave} alt="Wavy footer" />
       <Link reloadDocument to="/" className="logo">
         <img src={logo} alt="im-press logo" />

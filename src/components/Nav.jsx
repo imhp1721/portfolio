@@ -9,7 +9,7 @@ import logo from "../assets/img/logo.png";
 
 function Nav() {
   return (
-    <nav>
+    <nav className="grid_w_wave">
       <img className="wave" src={wave} alt="Wavy navigation" />
       <Link reloadDocument to="/" className="logo">
         <img src={logo} alt="im-press logo" />

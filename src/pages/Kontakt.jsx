@@ -27,8 +27,8 @@ function Kontakt() {
   return (
     <>
       <Nav />
-      <main className="contact">
-        <section className="info">
+      <main className="kontakt">
+        <section className="info txt_right main_grid">
           <img src={portrait} alt="Portrætfoto" />
           <article>
             <h2>Praktikant i foråret 2025</h2>
@@ -62,7 +62,7 @@ function Kontakt() {
           </article>
         </section>
         <section>
-          <img src={wave} alt="Wave" />
+          <img src={wave} alt="Wave overgang" />
         </section>
         <ContactForm />
       </main>
