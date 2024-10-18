@@ -30,7 +30,7 @@ function Footer() {
   return (
     <footer>
       <img className="wave" src={wave} alt="Wavy footer" />
-      <Link to="/" className="logo">
+      <Link reloadDocument to="/" className="logo">
         <img src={logo} alt="im-press logo" />
         <h4>im-press</h4>
       </Link>

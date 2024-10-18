@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 //img imports
 
+import wave from "../assets/waves/navbar.svg";
 import logo from "../assets/img/logo.png";
 
 //NAVIGATION
@@ -9,11 +10,7 @@ import logo from "../assets/img/logo.png";
 function Nav() {
   return (
     <nav>
-      <img
-        className="wave"
-        src="src\assets\waves\navbar.svg"
-        alt="Wavy navigation"
-      />
+      <img className="wave" src={wave} alt="Wavy navigation" />
       <Link reloadDocument to="/" className="logo">
         <img src={logo} alt="im-press logo" />
         <h4>im-press</h4>
