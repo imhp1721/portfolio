@@ -131,6 +131,24 @@ h2 {
   color: var(--clr_cta);
 }
 
+.cta_btn.scroll {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  gap: 1dvw;
+  justify-content: end;
+}
+
+.scroll_arrow img {
+  max-width: var(--font_s);
+}
+
+.scroll_arrow .cta_txt {
+  color: var(--clr_dark1);
+  padding: 0;
+  width: fit-content;
+}
+
 /* --------------------------------------------------
   HERO SECTION
 --------------------------------------------------- */
@@ -291,6 +309,10 @@ footer .info .so_me {
 footer .info .so_me a {
   padding-left: 5%;
   width: 10%;
+}
+
+footer .info .so_me a:hover {
+  opacity: .6;
 }
 
 footer .info .link {
@@ -480,6 +502,10 @@ main .info {
   PROJEKTER
 --------------------------------------------------------------------------- */
 
+.projects .info {
+  margin: 5% auto;
+}
+
 .projects .info h2 {
   grid-column: 1 / -1;
 }
@@ -490,7 +516,7 @@ main .info {
   grid-template-columns: subgrid;
 }
 
-.projects img {
+.projects img:not(.wave) {
   border-radius: var(--blob_border_rad);
 }
 
@@ -523,12 +549,57 @@ main .info {
   width: 65%;
 }
 
+.project_info {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  padding-top: 10%;
+  width: 80%;
+}
+
+.project_info:last-child {
+  margin-bottom: 10%;
+}
+
+.project_info div {
+  display: flex;
+  flex-direction: column;
+  gap: 3dvw;
+  grid-column: span 7;
+}
+
+.project_info div h2 {
+  padding: 0;
+}
+
+.project_info img {
+  grid-column: span 4;
+  grid-row: 1 / -1;
+  padding: 0;
+  width: 100%;
+}
+
+.project_info.left img,
+.project_info.right div {
+  grid-column-end: -1;
+}
+
+.project_info.right div {
+  align-items: end;
+}
+
+.project_info.right div h2 {
+  text-align: right;
+}
+
 /* --------------------------------------------------------------------------
   OM MIG
 --------------------------------------------------------------------------- */
 
 .om_mig .info {
-  margin: 5% auto 10%;
+  margin: 0 auto;
+  padding: 2% 0 8%;
   position: relative;
 }
 
@@ -626,8 +697,9 @@ main .info {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 10% auto;
+  margin: 0 auto;
   max-width: 1200px;
+  padding: 10% 0;
   width: 80%;
 }
 
@@ -677,7 +749,7 @@ main .info {
 --------------------------------------------------------------------------- */
 
 .contact .info {
-  margin: 10% auto 5%;
+  margin: 5% auto;
 }
 
 .contact .info article {

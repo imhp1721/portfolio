@@ -40,10 +40,14 @@ function Home() {
             </p>
             <div>
               <button className="cta_btn">
-                <Link to={"/kontakt"}>Kontakt mig</Link>
+                <Link reloadDocument to={"/kontakt"}>
+                  Kontakt mig
+                </Link>
               </button>
               <button className="cta_btn">
-                <Link to={"/projekter"}>Se mine projekter</Link>
+                <Link reloadDocument to={"/projekter"}>
+                  Se mine projekter
+                </Link>
               </button>
             </div>
           </article>

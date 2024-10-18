@@ -39,17 +39,17 @@ function Footer() {
         <div className="so_me">
           <Link
             to={"https://www.linkedin.com/in/inger-margrethe-holt-povlsen/"}
-            target="blank"
+            target="_blank"
           >
             <img src={linkedIn} alt="LinkedIn logo" />
           </Link>
-          <Link to={"https://github.com/imhp1721"} target="blank">
+          <Link to={"https://github.com/imhp1721"} target="_blank">
             <img src={gitHub} alt="GitHub logo" />
           </Link>
-          <Link to={"https://www.instagram.com/im_holt/"} target="blank">
+          <Link to={"https://www.instagram.com/im_holt/"} target="_blank">
             <img src={ig} alt="Instagram logo" />
           </Link>
-          <Link to={"https://www.facebook.com/imhp1721"} target="blank">
+          <Link to={"https://www.facebook.com/imhp1721"} target="_blank">
             <img src={fb} alt="Facebook logo" />
           </Link>
         </div>

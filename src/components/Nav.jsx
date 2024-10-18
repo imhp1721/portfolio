@@ -14,19 +14,25 @@ function Nav() {
         src="src\assets\waves\navbar.svg"
         alt="Wavy navigation"
       />
-      <Link to="/" className="logo">
+      <Link reloadDocument to="/" className="logo">
         <img src={logo} alt="im-press logo" />
         <h4>im-press</h4>
       </Link>
       <ul>
         <li>
-          <NavLink to="/projekter">projekter</NavLink>
+          <NavLink reloadDocument to="/projekter">
+            projekter
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/om-mig">om mig</NavLink>
+          <NavLink reloadDocument to="/om-mig">
+            om mig
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/kontakt">kontakt</NavLink>
+          <NavLink reloadDocument to="/kontakt">
+            kontakt
+          </NavLink>
         </li>
       </ul>
     </nav>

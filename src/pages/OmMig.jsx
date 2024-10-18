@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 
 //img imports
 
+import scrollArrow from "../assets/icons/scroll_arrow.svg";
 import wave from "../assets/waves/timeline.svg";
 import mduBlob from "../assets/blobs/mdu.svg";
 import internBlob from "../assets/blobs/intern.svg";
@@ -41,11 +42,14 @@ function OmMig() {
               Du kan se nogle af mine kreative projekter her.
             </p>
             <div>
-              <button className="cta_btn">
+              <button className="cta_btn scroll">
                 <a href="#hobby">Fritidsprojekter</a>
+                <img src={scrollArrow} alt="Pil nedad" />
               </button>
               <button className="cta_btn">
-                <Link to={"/projekter"}>Studieprojekter</Link>
+                <Link reloadDocument to={"/projekter"}>
+                  Studieprojekter
+                </Link>
               </button>
             </div>
           </article>
