@@ -38,13 +38,11 @@
   /* --- border radius --- */
   --border_rad: 5px;
 
-  /* --- border radius --- */
+  /* --- most used spacing --- */
   --main_vertical_space: 3dvw;
 }
 
-/* -----------------------------------------------
-  GENERAL STYLING
------------------------------------------------ */
+/* --- GENERAL STYLING --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 *,
 html,
@@ -115,9 +113,7 @@ h2 {
   font-size: var(--font_m);
 }
 
-/* ------------------------------------------------------------------------
-  REUSED CLASS STYLING
------------------------------------------------------------------------- */
+/* --- REUSED CLASS STYLING --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .main_grid {
   align-items: center;
@@ -125,6 +121,7 @@ h2 {
   grid-template-columns: repeat(12, 1fr);
   margin: 5dvw auto 10dvw;
   max-width: 1400px;
+  row-gap: var(--main_vertical_space);
   width: 80%;
 }
 
@@ -139,26 +136,40 @@ h2 {
   width: 100%;
 }
 
-/* -------------- text & image 2-part layout --------------------- */
+/* --- text & image 2-part layout --- */
+
+.txt_left h2,
+.txt_right h2 {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
 
 .txt_left article {
   grid-column: 1 / 8;
+  grid-row: 2 / 3;
 }
 
 .txt_left img,
 .txt_left .img_cluster {
   grid-column: 9 / -1;
+  grid-row: 2 / 3;
+}
+
+.txt_right h2 {
+  justify-self: end;
 }
 
 .txt_right article {
   grid-column: 6 / -1;
+  grid-row: 2 / 3;
 }
 
 .txt_right img {
   grid-column: 1 / 5;
+  grid-row: 2 / 3;
 }
 
-/* -------------- call-to-action elements --------------------- */
+/* --- call-to-action elements --- */
 
 .cta_txt {
   font-weight: var(--main_font_medium);
@@ -172,6 +183,7 @@ h2 {
   font-weight: var(--main_font_bold);
   padding: 1% 3%;
   transition: all 0.2s ease-in-out;
+  white-space: nowrap;
   width: fit-content;
 }
 
@@ -185,6 +197,10 @@ h2 {
   align-items: center;
   display: flex;
   gap: 1dvw;
+}
+
+.cta_btn.scroll img {
+  height: var(--font_m);
 }
 
 .logo,
@@ -207,38 +223,7 @@ footer .info .link a:hover {
   transform: scale(1.1);
 }
 
-/* --------------------------------------------------
-  HERO SECTION
---------------------------------------------------- */
-
-h1 {
-  color: var(--clr_light_bg);
-  font-size: var(--font_l);
-  letter-spacing: 0.1rem;
-  margin: 0 5%;
-  position: absolute;
-  text-shadow: 2px 2px 10px var(--clr_dark_txt);
-  top: 15dvh;
-  width: 90%;
-}
-
-.hero {
-  background-color: var(--clr_dark1);
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
-  height: 300px;
-  max-height: 40dvh;
-  max-width: 1998px;
-  object-fit: cover;
-  width: 100%;
-}
-
-/* --------------------------------------------------------
-  NAVIGATION
--------------------------------------------------------- */
+/* --- NAVIGATION --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 nav {
   font-size: var(--nav_size);
@@ -290,9 +275,7 @@ nav li {
   text-underline-offset: 0.2rem;
 }
 
-/* ------------------------------------------------------
-  FOOTER
-------------------------------------------------------- */
+/* --- FOOTER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 footer {
   align-items: end;
@@ -315,6 +298,8 @@ footer .logo h4 {
   font-weight: var(--header_regular);
   padding-top: 15%;
 }
+
+/* --- contact info & links --- */
 
 footer .info {
   display: flex;
@@ -358,6 +343,8 @@ footer .info .link {
   width: fit-content;
 }
 
+/* --- copyright --- */
+
 footer .copy {
   background-color: var(--clr_dark_txt);
   color: var(--clr_light_bg);
@@ -373,9 +360,7 @@ footer .copy p {
   text-align: right;
 }
 
-/* ---------------------------------------------------------
-  MAIN
---------------------------------------------------------- */
+/* --- MAIN --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 main .info article {
   display: flex;
@@ -383,16 +368,41 @@ main .info article {
   gap: var(--main_vertical_space);
 }
 
-main .info article .buttons {
+.buttons {
   display: flex;
   gap: var(--main_vertical_space);
 }
 
-/* ---------------------------------------------------------
-  HOME
---------------------------------------------------------- */
+/* --- HOME --------------------------------------------------------------------------------------------------------- */
 
-/* -------------- marquee feature --------------------- */
+/* --- hero section --- */
+
+h1 {
+  color: var(--clr_light_bg);
+  font-size: var(--font_l);
+  letter-spacing: 0.1rem;
+  margin: 0 10dvw;
+  position: absolute;
+  text-shadow: 2px 2px 10px var(--clr_dark_txt);
+  top: 15dvh;
+  width: 80%;
+}
+
+.hero {
+  background-color: var(--clr_dark1);
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  height: 300px;
+  max-height: 40dvh;
+  max-width: 1998px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* --- marquee feature --- */
 
 .feature {
   align-items: center;
@@ -427,7 +437,7 @@ main .info article .buttons {
   width: 230px;
 }
 
-/* ------------- skills section ----------------------- */
+/* --- skills section --- */
 
 .skills {
   padding-top: 5dvw;
@@ -511,38 +521,29 @@ main .info article .buttons {
   width: 67%;
 }
 
-/* --------------------------------------------------------------------------
-  OM MIG
---------------------------------------------------------------------------- */
+/* --- OM MIG ------------------------------------------------------------------------------------------------------- */
 
 .om_mig .info {
+  justify-items: center;
   position: relative;
 }
 
 .om_mig .info .full_fig_img {
-  grid-column: 2 / 4;
-  grid-row: 1 / -1;
   height: 100%;
   position: absolute;
   transition: all 0.5s ease-in-out; /* Smooth transition over 0.5 seconds */
+  max-width: 50%;
   z-index: 1;
 }
 
-.om_mig .info .blob {
-  grid-column: 1 / 5;
-  grid-row: 1 / -1;
-  margin: 25% 0;
-}
-
-.om_mig .info article {
-  grid-column: 6 / -1;
-  grid-row: 1 / -1;
-}
-
-/* ------ timeline section ------------------------------- */
+/* --- timeline section --- */
 
 .timeline {
   grid-template-rows: repeat(11, 1fr);
+}
+
+.timeline .wave {
+  align-self: center;
 }
 
 .year_txt {
@@ -561,7 +562,7 @@ main .info article .buttons {
 
 .mdu .year_txt,
 .intern .year_txt {
-  padding-top: 5%;
+  padding-top: 1.5dvw;
 }
 
 .mdu {
@@ -589,7 +590,7 @@ main .info article .buttons {
 
 .hf .year_txt,
 .ida .year_txt {
-  padding-bottom: 5%;
+  padding-bottom: 1.5dvw;
 }
 
 .hf {
@@ -600,7 +601,7 @@ main .info article .buttons {
   grid-column: 7 / 11;
 }
 
-/* ------ hobby section ------------------------------- */
+/* --- hobby section --- */
 
 .hobby {
   margin-top: 0;
@@ -618,7 +619,7 @@ main .info article .buttons {
   grid-column: 1 / -1;
 }
 
-/* ------ image carousel -------------- */
+/* --- image carousel --- */
 
 .img_carousel {
   grid-column: 1 / -1;
@@ -634,7 +635,7 @@ main .info article .buttons {
   text-align: right;
 }
 
-/* ------ image collage -------------- */
+/* --- image collage --- */
 
 .img_collage {
   align-items: center;
@@ -653,12 +654,11 @@ main .info article .buttons {
   margin-bottom: 1dvw;
 }
 
-/* --------------------------------------------------------------------------
-  PROJEKTER
---------------------------------------------------------------------------- */
+/* --- PROJEKTER ---------------------------------------------------------------------------------------------------- */
 
-.projekter .info {
+.projekter > .info {
   margin-bottom: 5dvw;
+  row-gap: var(--main_vertical_space);
 }
 
 .projekter .info h2 {
@@ -668,10 +668,16 @@ main .info article .buttons {
 .projekter .info .img_cluster {
   display: grid;
   grid-template-columns: subgrid;
+  height: 100%;
 }
 
-.projekter img:not(.wave) {
+.projekter img {
   border-radius: var(--blob_border_rad);
+}
+
+.projekter .wave,
+.projekter button img {
+  border-radius: 0;
 }
 
 .img_cluster .sem2_exam {
@@ -683,12 +689,14 @@ main .info article .buttons {
 }
 
 .img_cluster .interactive {
+  align-self: center;
   grid-column: 1 / 3;
   grid-row: 3 / 6;
   width: 80%;
 }
 
 .img_cluster .sem1_exam {
+  align-self: center;
   grid-column: 3 / -1;
   grid-row: 4 / 7;
   justify-self: end;
@@ -703,10 +711,20 @@ main .info article .buttons {
   width: 65%;
 }
 
-/* ------------- projects section ----------------------- */
+/* --- projects section --- */
 
-.projects {
+#projects {
   padding-top: 5dvw;
+}
+
+.projects .info {
+  padding-top: 5dvw;
+  margin-top: 0;
+}
+
+.projects .info article,
+.projects .info img {
+  grid-row: 1 / -1;
 }
 
 .projects .info.txt_right h2 {
@@ -717,15 +735,30 @@ main .info article .buttons {
   align-self: flex-end;
 }
 
-/* ---------------------------------------------------------------------------
-  KONTAKT
---------------------------------------------------------------------------- */
+/* --- KONTAKT ------------------------------------------------------------------------------------------------------ */
 
 .kontakt .info {
   margin-bottom: 5dvw;
+  row-gap: var(--main_vertical_space);
 }
 
-/* ------------- contact form ----------------------- */
+.kontakt .info img {
+  grid-row: 1 / 4;
+}
+
+.kontakt .cta_txt em {
+  font-style: normal;
+  text-decoration: underline solid 10%;
+  text-underline-offset: 0.2rem;
+}
+
+.kontakt .buttons {
+  display: none;
+  grid-column: 6 / -1;
+  grid-row: 3 / 4;
+}
+
+/* --- contact form --- */
 
 form.main_grid {
   margin-top: 0;
@@ -735,6 +768,7 @@ form.main_grid {
 
 form h2 {
   grid-column: 1 / -1;
+  padding-bottom: var(--main_vertical_space);
 }
 
 form div {
@@ -770,26 +804,52 @@ form .cta_btn {
   justify-self: center;
 }
 
-/* ------------------------------------------------------------------------
-  EXTRA LARGE SCREENS
--------------------------------------------------------------------------- */
+/* --- LARGE DESKTOP SCREENS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   :root {
     --main_vertical_space: 2dvw;
   }
 
+  /* --- text & image 2-part layout --- */
+
+  .txt_left h2 {
+    grid-column: 1 / 8;
+  }
+
+  .txt_left img,
+  .txt_left .img_cluster,
+  .txt_right img {
+    grid-row: 1 / 3;
+  }
+
+  .txt_right h2 {
+    grid-column: 6 / -1;
+    justify-self: baseline;
+  }
+
+  /* --- HOME --- */
+
   .skills .quote p {
     font-size: var(--nav_size);
   }
+
+  /* --- KONTAKT --- */
+
+  .kontakt .cta_txt em {
+    font-style: normal;
+    text-decoration: none;
+  }
+
+  .kontakt .buttons {
+    display: flex;
+  }
 }
 
-/* -----------------------------------------------------------------------
-  MEDIUM SCREENS
--------------------------------------------------------------------------- */
+/* --- MEDIUM MOBILE SCREENS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 800px) {
-  #root {
+@media only screen and (max-width: 850px) {
+  :root {
     /* --- font sizes --- */
     --font_xs: clamp(0.6rem, 0.9vw, 1rem);
     --font_s: clamp(0.8rem, 1vw, 1.1rem);
@@ -798,93 +858,86 @@ form .cta_btn {
     --font_l: clamp(1.8rem, 2.5vw, 2.8rem);
   }
 
-  /* --- NAVIGATION --- */
+  .main_grid {
+    width: 90%;
+  }
+
+  .grid_w_wave {
+    grid-template-columns: 5dvw repeat(12, 1fr) 5dvw;
+  }
+
+  /* --- text & image 2-part layout --- */
+
+  .txt_left article {
+    grid-column: 1 / 7;
+  }
+
+  .txt_left img,
+  .txt_left .img_cluster {
+    grid-column: 8 / -1;
+  }
+
+  .txt_right article {
+    grid-column: 6 / -1;
+  }
+
+  .txt_right img {
+    grid-column: 1 / 5;
+  }
+
+  /* --- NAVIGATION ------------------------------------------------------------------------------------------------- */
 
   nav .logo {
     grid-column: 2 / 6;
   }
 
-  /* ----------------
-    HERO SECTION
-  ----------------- */
-
-  h1 {
-    margin: 0 10%;
-    top: 7.5vh;
-    width: 80%;
-  }
-
-  .hero img {
-    max-height: 20vh;
-  }
-
-  /* ----------------
-    FOOTER
-  ----------------- */
-
-  footer .logo {
-    grid-column: 2 / 5;
-  }
-
-  footer .logo img {
-    max-width: 15vw;
-  }
+  /* --- FOOTER ----------------------------------------------------------------------------------------------------- */
 
   footer .logo h4 {
     white-space: nowrap;
+  }
+
+  footer .info h2 {
+    letter-spacing: normal;
   }
 
   footer .info {
     grid-column: 2 / -2;
   }
 
-  footer .info h2 {
-    padding-bottom: 3%;
-  }
-
-  footer .info .so_me {
-    padding-bottom: 2%;
-  }
-
-  footer .info .so_me a {
-    padding-left: 3%;
-    width: 7%;
-  }
-
   footer .info .link {
     font-weight: var(--main_font_light);
-    padding-bottom: 2%;
   }
 
-  /* ----------------
-    MAIN
-  ----------------- */
+  /* --- MAIN ------------------------------------------------------------------------------------------------------- */
 
-  .info article {
-    grid-column: 1 / 8;
+  /* --- HOME --- */
+
+  .home .info article .cta_txt {
+    display: none;
   }
 
-  .info img {
-    grid-column: 9 / -1;
+  /* --- hero section --- */
+
+  h1 {
+    margin: 0;
+    top: 7vh;
+    width: 100%;
   }
 
-  /* ----------------
-    HOME
-  ----------------- */
+  .hero img {
+    max-height: 15vh;
+  }
 
   /* --- marquee feature --- */
 
   .word {
     left: calc(200px * 17); /* width of each word * amount of words */
-    padding: 0.25% 0;
+    padding: 0.25dvw 0;
     width: 180px;
   }
 
   /* --- skills section --- */
-
-  .skills .quote p {
-    width: 80%;
-  }
 
   .bar {
     border-radius: 3px;
@@ -895,69 +948,129 @@ form .cta_btn {
     border-radius: 0;
   }
 
-  /* ----------------
-    CONTACT
-  ----------------- */
+  /* --- OM MIG --- */
 
-  .contact .info {
-    margin: 8% auto 8%;
+  .om_mig .info .full_fig_img,
+  .om_mig .info .blob {
+    grid-column: 1 / 4;
   }
 
-  .contact .cta_txt {
-    padding: 3% 0 3%;
+  .om_mig .info .full_fig_img {
+    max-width: 75%;
   }
 
-  form {
-    margin: 8% auto 8%;
+  .om_mig .info article {
+    grid-column: 5 / -1;
+  }
+
+  .om_mig .info article .cta_txt {
+    display: none;
+  }
+
+  /* --- timeline section --- */
+
+  .timeline {
+    grid-template-rows: repeat(9, 1fr);
+  }
+
+  .mdu,
+  .intern {
+    grid-row: 2 / 5;
+    width: 80%;
+  }
+
+  .hf,
+  .ida {
+    align-self: baseline;
+    grid-row: 6 / 9;
+    justify-self: center;
+    width: 57%;
+  }
+
+  /* --- PROJEKTER --- */
+
+  .img_cluster .sem2_exam {
+    width: 60%;
+  }
+
+  .img_cluster .interactive {
+    width: 90%;
+  }
+
+  .img_cluster .sem1_exam {
+    width: 85%;
+  }
+
+  .img_cluster .mobile_first {
+    grid-column: 1 / 4;
+    justify-self: center;
+    padding: 0;
+    width: 70%;
   }
 }
 
-/* ---------------------------------------------------------------------------
-  SMALL SCREENS
---------------------------------------------------------------------------- */
+/* --- SMALL MOBILE SCREENS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 450px) {
-  #root {
+@media only screen and (max-width: 550px) {
+  :root {
     /* --- font sizes --- */
     --font_xs: clamp(0.5rem, 0.5vw, 0.8rem);
     --font_s: clamp(0.8rem, 0.9vw, 1rem);
     --nav_size: clamp(0.6rem, 0.8vw, 1rem);
     --font_m: clamp(1rem, 1.2vw, 1.5rem);
     --font_l: clamp(1.2rem, 1.2vw, 1.8rem);
+
+    /* --- most used spacing --- */
+    --main_vertical_space: 5dvw;
   }
 
-  /* ----------------
-    HERO SECTION
-  ----------------- */
-
-  h1 {
-    margin: 0 15%;
-    top: 3vh;
-    width: 70%;
+  .main_grid {
+    width: 80%;
   }
 
-  .hero img {
-    max-height: 12vh;
+  .grid_w_wave {
+    grid-template-columns: 10dvw repeat(12, 1fr) 10dvw;
   }
 
-  /* ----------------
-    NAVIGATION
-  ----------------- */
+  /* --- text & image 2-part layout --- */
 
-  nav .logo {
+  .txt_left h2,
+  .txt_right h2 {
+    justify-self: center;
+  }
+
+  .txt_left img,
+  .txt_left .img_cluster,
+  .txt_right img {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 75%;
+  }
+
+  .txt_left article,
+  .txt_right article {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .buttons {
+    justify-content: space-between;
+  }
+
+  /* --- NAVIGATION ------------------------------------------------------------------------------------------------- */
+
+  /* nav .logo {
     align-items: flex-start;
   }
 
   nav ul {
     align-items: flex-start;
     font-weight: var(--header_regular);
-  }
+  } */
 
-  /* ----------------
-    FOOTER
-  ----------------- */
+  /* --- FOOTER ----------------------------------------------------------------------------------------------------- */
 
-  footer .logo {
+  /* footer .logo {
     grid-column: 2 / 4;
   }
 
@@ -982,47 +1095,38 @@ form .cta_btn {
 
   footer .info .link {
     padding-bottom: 1%;
+  } */
+
+  /* --- MAIN ------------------------------------------------------------------------------------------------------- */
+
+  /* --- HOME --- */
+
+  /* --- hero section --- */
+
+  h1 {
+    top: 3vh;
   }
 
-  /* ----------------
-    MAIN
-  ----------------- */
-
-  main .info {
-    width: 80%;
+  .hero img {
+    max-height: 10dvh;
   }
-
-  .info article {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-  }
-
-  .info img {
-    grid-column: 4 / -4;
-    grid-row: 1 / 2;
-    margin: 0 auto 10%;
-  }
-
-  /* ----------------
-    HOME
-  ----------------- */
 
   /* --- marquee feature --- */
 
-  .feature {
+  /* .feature {
     padding: 5% 0;
   }
 
   .word {
     border-radius: 3px;
-    font-weight: var(--main_font_medium);
-    left: calc(160px * 17); /* width of each word * amount of words */
-    width: 150px;
+    font-weight: var(--main_font_medium); */
+    /* left: calc(160px * 17); width of each word * amount of words */
+    /* width: 150px; */
   }
 
   /* --- skills section --- */
 
-  .skills {
+  /* .skills {
     width: 80%;
   }
 
@@ -1042,13 +1146,13 @@ form .cta_btn {
 
   .skill {
     padding-bottom: 5%;
-  }
+  } */
 
   /* ----------------
     CONTACT
   ----------------- */
 
-  .contact .cta_txt {
+  /* .contact .cta_txt {
     padding: 4% 0 4%;
   }
 
@@ -1059,5 +1163,5 @@ form .cta_btn {
   form input,
   form textarea {
     margin: 2% 0 5%;
-  }
-}
+  } */
+

@@ -37,9 +37,9 @@ function OmMig() {
       <Nav />
       <main className="om_mig">
         <section className="info txt_right main_grid">
+          <h2>Jeg fylder mit liv med kreativitet</h2>
           <MakeMeLaugh />
           <article>
-            <h2>Jeg fylder mit liv med kreativitet</h2>
             <p>
               Hele mit liv har jeg dyrket at være kreativ. Om det har været i
               stof, på papir, i træ eller digitalt. Finder jeg et nyt medie,

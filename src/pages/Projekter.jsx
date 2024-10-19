@@ -15,7 +15,6 @@ import wave from "../assets/waves/transition.svg";
 //PROJEKTER
 
 function Projekter() {
-
   // SCROLL BUTTON FUNCTIONALITY
   // State to track hover state
   const [isHovered, setIsHovered] = useState(false);

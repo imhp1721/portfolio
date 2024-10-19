@@ -46,9 +46,9 @@ function Kontakt() {
       <Nav />
       <main className="kontakt">
         <section className="info txt_right main_grid">
+          <h2>Praktikant i foråret 2025</h2>
           <img src={portrait} alt="Portrætfoto" />
           <article>
-            <h2>Praktikant i foråret 2025</h2>
             <p>
               Som praktikant håber jeg på at bidrage ved at løse opgaver inden
               for frontend og multimediedesign. Jeg søger en mulighed for at
@@ -61,37 +61,47 @@ function Kontakt() {
               spændende projekter.
             </p>
             <p className="cta_txt">
-              Send en mail til imhp@hotmail.dk eller ring til 51953055.
-              <br />
-              Ellers kan du sende mig en besked ved at benytte kontaktformularen
-              herunder.
-            </p>
-            <div className="buttons">
-              <button className="cta_btn">
-                <Mailto
-                  email="imhp@hotmail.dk"
-                  subject="Praktikmulighed hos *tilføj din virksomhed*"
-                  body=""
-                >
-                  Send mail
-                </Mailto>
-              </button>
-              <button className="cta_btn">
-                <Callto phone="+4551953055">Ring til mig</Callto>
-              </button>
-              <button
-                onMouseEnter={darkenArrow}
-                onMouseLeave={lightenArrow}
-                className="cta_btn scroll"
+              Send en mail til{" "}
+              <Mailto
+                email="imhp@hotmail.dk"
+                subject="Praktikmulighed hos *tilføj din virksomhed*"
+                body=""
               >
-                <a href="#contactform">Brug kontaktformular</a>
-                <img
-                  src={isHovered ? scrollArrowHover : scrollArrow}
-                  alt="Pil nedad"
-                />
-              </button>
-            </div>
+                <em>imhp@hotmail.dk</em>
+              </Mailto>{" "}
+              eller ring til{" "}
+              <Callto phone="+4551953055">
+                <em>51953055</em>
+              </Callto>
+              . Ellers kan du sende mig en besked ved at benytte
+              kontaktformularen herunder.
+            </p>
           </article>
+          <div className="buttons">
+            <button className="cta_btn">
+              <Mailto
+                email="imhp@hotmail.dk"
+                subject="Praktikmulighed hos *tilføj din virksomhed*"
+                body=""
+              >
+                Send mail
+              </Mailto>
+            </button>
+            <button className="cta_btn">
+              <Callto phone="+4551953055">Ring til mig</Callto>
+            </button>
+            <button
+              onMouseEnter={darkenArrow}
+              onMouseLeave={lightenArrow}
+              className="cta_btn scroll"
+            >
+              <a href="#contactform">Brug kontaktformular</a>
+              <img
+                src={isHovered ? scrollArrowHover : scrollArrow}
+                alt="Pil nedad"
+              />
+            </button>
+          </div>
         </section>
         <section>
           <img className="wave" src={wave} alt="Wave overgang" />
