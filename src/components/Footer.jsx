@@ -34,9 +34,9 @@ function Footer() {
         <img src={logo} alt="im-press logo" />
         <h4>im-press</h4>
       </Link>
-      <section className="info">
+      <article className="info">
         <h2>Inger-Margrethe Holt Povlsen</h2>
-        <div className="so_me">
+        <section className="so_me">
           <Link
             to={"https://www.linkedin.com/in/inger-margrethe-holt-povlsen/"}
             target="_blank"
@@ -52,8 +52,8 @@ function Footer() {
           <Link to={"https://www.facebook.com/imhp1721"} target="_blank">
             <img src={fb} alt="Facebook logo" />
           </Link>
-        </div>
-        <div className="link">
+        </section>
+        <section className="link">
           <Mailto
             email="imhp@hotmail.dk"
             subject="Praktikmulighed hos *tilføj din virksomhed*"
@@ -61,11 +61,9 @@ function Footer() {
           >
             imhp@hotmail.dk
           </Mailto>
-        </div>
-        <div className="link">
           <Callto phone="+4551953055">+4551953055</Callto>
-        </div>
-      </section>
+        </section>
+      </article>
       <section className="copy">
         <p>Copyright &copy; 2024 im-press | All rights reserved</p>
       </section>

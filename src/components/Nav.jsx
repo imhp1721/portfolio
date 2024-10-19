@@ -17,13 +17,13 @@ function Nav() {
       </Link>
       <ul>
         <li>
-          <NavLink reloadDocument to="/projekter">
-            projekter
+          <NavLink reloadDocument to="/om-mig">
+            om mig
           </NavLink>
         </li>
         <li>
-          <NavLink reloadDocument to="/om-mig">
-            om mig
+          <NavLink reloadDocument to="/projekter">
+            projekter
           </NavLink>
         </li>
         <li>

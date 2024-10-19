@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/rdz6bkk.css");
 
-#root {
+:root {
   /* --- color palette --- */
   --clr_dark_txt: #030c0a;
   --clr_dark1: #0f342c;
@@ -34,6 +34,12 @@
 
   /* --- main blob shape --- */
   --blob_border_rad: 63% 37% 66% 34% / 34% 57% 43% 66%;
+
+  /* --- border radius --- */
+  --border_rad: 5px;
+
+  /* --- border radius --- */
+  --main_vertical_space: 3dvw;
 }
 
 /* -----------------------------------------------
@@ -117,8 +123,8 @@ h2 {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 5dvw auto;
-  max-width: 1200px;
+  margin: 5dvw auto 10dvw;
+  max-width: 1400px;
   width: 80%;
 }
 
@@ -128,6 +134,8 @@ h2 {
 }
 
 .wave {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   width: 100%;
 }
 
@@ -175,10 +183,28 @@ h2 {
 
 .cta_btn.scroll {
   align-items: center;
-  border-radius: 5px;
   display: flex;
   gap: 1dvw;
-  justify-content: end;
+}
+
+.logo,
+nav li,
+footer .info .so_me img,
+footer .info .link a {
+  color: var(--clr_light_bg);
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.logo:hover {
+  color: var(--clr_cta);
+  transform: scale(1.05);
+}
+
+nav li:hover,
+footer .info .link a:hover {
+  color: var(--clr_cta);
+  transform: scale(1.1);
 }
 
 /* --------------------------------------------------
@@ -221,19 +247,12 @@ nav {
   z-index: 3;
 }
 
-nav .wave {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-}
-
 nav .logo {
   align-items: center;
   display: flex;
   grid-column: 2 / 5;
   grid-row: 1 / 2;
   padding-top: 4%;
-  transform: scale(1);
-  transition: all 0.2s ease-in-out;
 }
 
 nav .logo img {
@@ -242,7 +261,6 @@ nav .logo img {
 }
 
 nav .logo h4 {
-  color: var(--clr_light_bg);
   font-weight: var(--header_regular);
   padding-bottom: 15%;
 }
@@ -263,8 +281,6 @@ nav ul {
 
 nav li {
   height: fit-content;
-  transform: scale(1);
-  transition: all 0.2s ease-in-out;
   width: fit-content;
 }
 
@@ -274,27 +290,13 @@ nav li {
   text-underline-offset: 0.2rem;
 }
 
-nav .logo:hover {
-  transform: scale(1.05);
-}
-
-nav li:hover {
-  color: var(--clr_cta);
-  transform: scale(1.1);
-}
-
 /* ------------------------------------------------------
   FOOTER
 ------------------------------------------------------- */
 
 footer {
   align-items: end;
-}
-
-footer .wave {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  object-fit: cover;
+  color: var(--clr_light_bg);
 }
 
 footer .logo {
@@ -306,47 +308,54 @@ footer .logo {
 
 footer .logo img {
   transform: translateY(2%);
-  max-width: 17.5vw;
+  max-width: 16vw;
 }
 
 footer .logo h4 {
-  color: var(--clr_light_bg);
   font-weight: var(--header_regular);
   padding-top: 15%;
 }
 
 footer .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2dvw;
   grid-column: 6 / -2;
   grid-row: 1 / 2;
-  padding-bottom: 3%;
+  padding-bottom: var(--main_vertical_space);
   text-align: right;
 }
 
 footer .info h2 {
-  color: var(--clr_light_bg);
   letter-spacing: 0.1rem;
 }
 
 footer .info .so_me {
   display: flex;
+  gap: 2dvw;
   justify-content: flex-end;
-  padding-bottom: 3%;
 }
 
 footer .info .so_me a {
-  padding-left: 5%;
-  width: 10%;
+  max-height: var(--font_m);
 }
 
-footer .info .so_me a:hover {
+footer .info .so_me img {
+  max-width: var(--font_m);
+}
+
+footer .info .so_me img:hover {
   opacity: 0.6;
+  transform: scale(1.25);
 }
 
 footer .info .link {
-  color: var(--clr_light_bg);
-  font-size: var(--font_s);
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5dvw;
   letter-spacing: 0.2rem;
-  padding-bottom: 2%;
+  width: fit-content;
 }
 
 footer .copy {
@@ -360,7 +369,7 @@ footer .copy {
 footer .copy p {
   font-size: var(--font_xs);
   font-weight: var(--main_font_light);
-  padding: 0.5% 8.5%;
+  padding: 0.5dvw 10dvw;
   text-align: right;
 }
 
@@ -371,12 +380,12 @@ footer .copy p {
 main .info article {
   display: flex;
   flex-direction: column;
-  gap: 3dvw;
+  gap: var(--main_vertical_space);
 }
 
 main .info article .buttons {
   display: flex;
-  gap: 3dvw;
+  gap: var(--main_vertical_space);
 }
 
 /* ---------------------------------------------------------
@@ -389,17 +398,11 @@ main .info article .buttons {
   align-items: center;
 }
 
-.feature .wave {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-}
-
 .marquee {
   align-items: center;
   display: flex;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
-  justify-content: space-evenly;
   height: 50%;
   overflow: hidden;
   position: relative;
@@ -414,17 +417,22 @@ main .info article .buttons {
 .word {
   animation: move_marquee 60s linear infinite;
   background-color: var(--clr_light1);
-  border-radius: 5px;
+  border-radius: var(--border_rad);
   color: var(--clr_dark1);
   font-weight: var(--main_font_bold);
   left: calc(250px * 17); /* width of each word * amount of words */
-  padding: 0.5% 0;
+  padding: 0.4dvw 0;
   position: absolute;
   text-align: center;
   width: 230px;
 }
 
 /* ------------- skills section ----------------------- */
+
+.skills {
+  padding-top: 5dvw;
+  row-gap: 5dvw;
+}
 
 .skills h2 {
   grid-column: 1 / -1;
@@ -454,12 +462,12 @@ main .info article .buttons {
 }
 
 .skill:not(:last-child) {
-  padding-bottom: 3dvw;
+  padding-bottom: var(--main_vertical_space);
 }
 
 .bar {
   border: 2px solid var(--clr_dark1);
-  border-radius: 5px;
+  border-radius: var(--border_rad);
   fill: transparent;
   height: 25px;
   width: 100%;
@@ -504,8 +512,154 @@ main .info article .buttons {
 }
 
 /* --------------------------------------------------------------------------
+  OM MIG
+--------------------------------------------------------------------------- */
+
+.om_mig .info {
+  position: relative;
+}
+
+.om_mig .info .full_fig_img {
+  grid-column: 2 / 4;
+  grid-row: 1 / -1;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s ease-in-out; /* Smooth transition over 0.5 seconds */
+  z-index: 1;
+}
+
+.om_mig .info .blob {
+  grid-column: 1 / 5;
+  grid-row: 1 / -1;
+  margin: 25% 0;
+}
+
+.om_mig .info article {
+  grid-column: 6 / -1;
+  grid-row: 1 / -1;
+}
+
+/* ------ timeline section ------------------------------- */
+
+.timeline {
+  grid-template-rows: repeat(11, 1fr);
+}
+
+.year_txt {
+  color: var(--clr_light_bg);
+  font-size: var(--font_s);
+  font-weight: var(--header_extrabold);
+  text-align: center;
+}
+
+.mdu,
+.intern {
+  grid-row: 3 / 7;
+  justify-self: center;
+  width: 90%;
+}
+
+.mdu .year_txt,
+.intern .year_txt {
+  padding-top: 5%;
+}
+
+.mdu {
+  grid-column: 5 / 8;
+}
+
+.intern {
+  grid-column: 10 / 13;
+}
+
+.arrow {
+  align-self: center;
+  grid-column: 1 / -2;
+  grid-row: 6 / -6;
+  width: 100%;
+}
+
+.hf,
+.ida {
+  align-self: end;
+  grid-row: 6 / 10;
+  justify-self: center;
+  width: 67%;
+}
+
+.hf .year_txt,
+.ida .year_txt {
+  padding-bottom: 5%;
+}
+
+.hf {
+  grid-column: 2 / 6;
+}
+
+.ida {
+  grid-column: 7 / 11;
+}
+
+/* ------ hobby section ------------------------------- */
+
+.hobby {
+  margin-top: 0;
+  max-width: 1200px;
+  padding-top: 10dvw;
+}
+
+.hobby h2 {
+  padding-bottom: var(--main_vertical_space);
+}
+
+.hobby h2,
+.hobby h3,
+.hobby p {
+  grid-column: 1 / -1;
+}
+
+/* ------ image carousel -------------- */
+
+.img_carousel {
+  grid-column: 1 / -1;
+  padding-bottom: var(--main_vertical_space);
+}
+
+.img_carousel img {
+  border-radius: var(--border_rad);
+}
+
+.img_carousel .txt h4,
+.img_carousel .txt p {
+  text-align: right;
+}
+
+/* ------ image collage -------------- */
+
+.img_collage {
+  align-items: center;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-gap: 1.2dvw;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: var(--main_vertical_space);
+}
+
+.img_collage div img {
+  border-radius: var(--border_rad);
+}
+
+.img_collage div img:not(:last-child) {
+  margin-bottom: 1dvw;
+}
+
+/* --------------------------------------------------------------------------
   PROJEKTER
 --------------------------------------------------------------------------- */
+
+.projekter .info {
+  margin-bottom: 5dvw;
+}
 
 .projekter .info h2 {
   grid-column: 1 / -1;
@@ -552,11 +706,7 @@ main .info article .buttons {
 /* ------------- projects section ----------------------- */
 
 .projects {
-  padding: 5dvw 0;
-}
-
-.projects .info {
-  padding-bottom: 5dvw;
+  padding-top: 5dvw;
 }
 
 .projects .info.txt_right h2 {
@@ -567,191 +717,40 @@ main .info article .buttons {
   align-self: flex-end;
 }
 
-/* --------------------------------------------------------------------------
-  OM MIG
---------------------------------------------------------------------------- */
-
-.om_mig .info {
-  margin: 0 auto;
-  padding: 2% 0 8%;
-  position: relative;
-}
-
-.om_mig .info .full_fig_img {
-  grid-column: 2 / 4;
-  grid-row: 1 / -1;
-  height: 100%;
-  position: absolute;
-  transition: all 0.5s ease-in-out; /* Smooth transition over 0.5 seconds */
-  z-index: 1;
-}
-
-.om_mig .info .blob {
-  grid-column: 1 / 5;
-  grid-row: 1 / -1;
-  margin: 25% 0;
-}
-
-.om_mig .info article {
-  grid-column: 6 / -1;
-  grid-row: 1 / -1;
-}
-
-/* ------ timeline section ------------------------------- */
-
-.timeline {
-  grid-template-rows: repeat(11, 1fr);
-}
-
-.timeline .wave {
-  align-self: center;
-  grid-column: 1 / -1;
-  grid-row: 1 / 12;
-}
-
-.year_txt {
-  color: var(--clr_light_bg);
-  font-size: var(--font_s);
-  font-weight: var(--header_extrabold);
-  text-align: center;
-}
-
-.mdu,
-.intern {
-  grid-row: 3 / 7;
-  justify-self: center;
-  width: 90%;
-}
-
-.mdu .year_txt,
-.intern .year_txt {
-  padding-top: 5%;
-}
-
-.mdu {
-  grid-column: 5 / 8;
-}
-
-.intern {
-  grid-column: 10 / 13;
-}
-
-.arrow {
-  align-self: center;
-  grid-column: 1 / -2;
-  grid-row: 6 / -6;
-}
-
-.hf,
-.ida {
-  align-self: end;
-  grid-row: 6 / 10;
-  justify-self: center;
-  width: 67%;
-}
-
-.hf .year_txt,
-.ida .year_txt {
-  padding-bottom: 5%;
-}
-
-.hf {
-  grid-column: 2 / 6;
-}
-
-.ida {
-  grid-column: 7 / 11;
-}
-
-/* ------ hobby section ------------------------------- */
-
-.hobby {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 10% 0;
-  width: 80%;
-}
-
-.hobby h2,
-.hobby h3,
-.hobby p {
-  grid-column: 1 / -1;
-}
-
-/* ------ image carousel -------------- */
-
-.img_carousel {
-  grid-column: 1 / -1;
-  margin-bottom: 5%;
-}
-
-.img_carousel img {
-  border-radius: 5px;
-}
-
-.img_carousel .txt h4,
-.img_carousel .txt p {
-  text-align: right;
-}
-
-/* ------ image collage -------------- */
-
-.img_collage {
-  align-items: center;
-  display: grid;
-  grid-column: 1 / -1;
-  grid-gap: 1.2dvw;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 3dvw;
-}
-
-.img_collage div img {
-  border-radius: 5px;
-}
-
-.img_collage div img:not(:last-child) {
-  margin-bottom: 1dvw;
-}
-
 /* ---------------------------------------------------------------------------
-  CONTACT
+  KONTAKT
 --------------------------------------------------------------------------- */
 
-.contact .info {
-  margin: 5% auto;
+.kontakt .info {
+  margin-bottom: 5dvw;
 }
 
-.contact .info article {
-  grid-column: 6 / -1;
+/* ------------- contact form ----------------------- */
+
+form.main_grid {
+  margin-top: 0;
+  padding-top: 10dvw;
+  row-gap: var(--main_vertical_space);
 }
 
-.contact .info img {
-  grid-column: 1 / 5;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 8% auto 10%;
-  max-width: 1200px;
+form h2 {
+  grid-column: 1 / -1;
 }
 
 form div {
   display: flex;
   flex-direction: column;
+  grid-column: 1 / -1;
 }
 
 form input,
 form textarea {
   background-color: var(--clr_light1);
   border: 4px solid var(--clr_light2);
-  border-radius: 5px;
-  margin: 1% 0 3%;
-  padding: 1%;
+  border-radius: var(--border_rad);
+  margin-top: 0.5dvw;
   outline: none;
+  padding: 1%;
 }
 
 form textarea {
@@ -767,14 +766,19 @@ form textarea::placeholder {
 }
 
 form .cta_btn {
-  align-self: center;
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 /* ------------------------------------------------------------------------
   EXTRA LARGE SCREENS
 -------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
+  :root {
+    --main_vertical_space: 2dvw;
+  }
+
   .skills .quote p {
     font-size: var(--nav_size);
   }

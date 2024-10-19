@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import ContactForm from "../components/ContactForm";
 import Nav from "../components/Nav";
+import { useState } from "react";
 
 //img imports
 
 import portrait from "../assets/img/portrait.png";
+import scrollArrow from "../assets/icons/scroll_arrow.svg";
+import scrollArrowHover from "../assets/icons/scroll_arrow_hover.svg";
 import wave from "../assets/waves/transition.svg";
 
 //KONTAKT
@@ -24,6 +27,20 @@ function Kontakt() {
     return <a href={`tel:${phone}`}>{children}</a>;
   };
 
+  // SCROLL BUTTON FUNCTIONALITY
+  // State to track hover state
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Function to handle mouse enter
+  const darkenArrow = () => {
+    setIsHovered(true);
+  };
+
+  // Function to handle mouse leave
+  const lightenArrow = () => {
+    setIsHovered(false);
+  };
+
   return (
     <>
       <Nav />
@@ -39,26 +56,41 @@ function Kontakt() {
               derigennem udvide mine færdigheder inden for faget. Jeg er klar
               til at bringe kreative indspark til bordet og ser frem til både
               udfordringer og læring.
-            </p>
-            <p>
+              <br />
               Tag gerne kontakt, hvis du er interesseret i at samarbejde om
               spændende projekter.
             </p>
             <p className="cta_txt">
-              Send en mail til
-              <Mailto
-                email="imhp@hotmail.dk"
-                subject="Praktikmulighed hos *tilføj din virksomhed*"
-                body=""
-              >
-                &nbsp;imhp@hotmail.dk&nbsp;
-              </Mailto>
-              eller ring til <Callto phone="+4551953055">51953055</Callto>.
-            </p>
-            <p>
+              Send en mail til imhp@hotmail.dk eller ring til 51953055.
+              <br />
               Ellers kan du sende mig en besked ved at benytte kontaktformularen
               herunder.
             </p>
+            <div className="buttons">
+              <button className="cta_btn">
+                <Mailto
+                  email="imhp@hotmail.dk"
+                  subject="Praktikmulighed hos *tilføj din virksomhed*"
+                  body=""
+                >
+                  Send mail
+                </Mailto>
+              </button>
+              <button className="cta_btn">
+                <Callto phone="+4551953055">Ring til mig</Callto>
+              </button>
+              <button
+                onMouseEnter={darkenArrow}
+                onMouseLeave={lightenArrow}
+                className="cta_btn scroll"
+              >
+                <a href="#contactform">Brug kontaktformular</a>
+                <img
+                  src={isHovered ? scrollArrowHover : scrollArrow}
+                  alt="Pil nedad"
+                />
+              </button>
+            </div>
           </article>
         </section>
         <section>

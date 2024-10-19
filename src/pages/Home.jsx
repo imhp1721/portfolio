@@ -29,11 +29,8 @@ function Home() {
               æstetisk orienteret. Jeg stræber efter at skabe designs, der både
               er intuitive og appellerende for brugeren, samtidig med at de er
               velfungerende og strukturerede i koden.
-            </p>
-            <p>
-              Jeg har sans for at skabe content, hvilket jeg praktiserer gennem
-              mit studiejob, men min sande passion ligger i at skabe harmoni
-              mellem de tekniske og visuelle aspekter af mit fag.
+              <br />
+              Jeg har sans for at skabe content, hvilket jeg praktiserer gennem mit studiejob, men min sande passion ligger i at skabe harmoni mellem de tekniske og visuelle aspekter af mit fag.
             </p>
             <p className="cta_txt">
               Jeg søger praktikplads fra 6. januar 2025.

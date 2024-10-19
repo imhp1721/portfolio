@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import { useState } from "react";
 
 //img imports
 
@@ -8,11 +9,26 @@ import sem2Exam from "../assets/img/2sem_exam.jpg";
 import sem1Exam from "../assets/img/1sem_exam.jpg";
 import mobileFirst from "../assets/img/mobile_first.jpg";
 import scrollArrow from "../assets/icons/scroll_arrow.svg";
+import scrollArrowHover from "../assets/icons/scroll_arrow_hover.svg";
 import wave from "../assets/waves/transition.svg";
 
 //PROJEKTER
 
 function Projekter() {
+
+  // SCROLL BUTTON FUNCTIONALITY
+  // State to track hover state
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Function to handle mouse enter
+  const darkenArrow = () => {
+    setIsHovered(true);
+  };
+
+  // Function to handle mouse leave
+  const lightenArrow = () => {
+    setIsHovered(false);
+  };
   return (
     <>
       <Nav />
@@ -37,9 +53,16 @@ function Projekter() {
                   Fritidsprojekter
                 </Link>
               </button>
-              <button className="cta_btn scroll">
+              <button
+                onMouseEnter={darkenArrow}
+                onMouseLeave={lightenArrow}
+                className="cta_btn scroll"
+              >
                 <a href="#projects">Studieprojekter</a>
-                <img src={scrollArrow} alt="Pil nedad" />
+                <img
+                  src={isHovered ? scrollArrowHover : scrollArrow}
+                  alt="Pil nedad"
+                />
               </button>
             </div>
           </article>
