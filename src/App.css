@@ -228,8 +228,13 @@ footer .info .link a:hover {
 nav {
   font-size: var(--nav_size);
   position: sticky;
-  top: 0;
+  top: -2px;
   z-index: 3;
+}
+
+nav .wave {
+  min-height: 60px;
+  object-fit: cover;
 }
 
 nav .logo {
@@ -251,7 +256,7 @@ nav .logo h4 {
   white-space: nowrap;
 }
 
-nav ul {
+nav .menu {
   align-items: center;
   color: var(--clr_light_bg);
   display: flex;
@@ -861,9 +866,16 @@ form .cta_btn {
   :root {
     /* --- font sizes --- */
     --font_s: clamp(0.9rem, 1vw, 1.2rem);
-    --nav_size: clamp(1rem, 1.2vw, 1.4rem);
+    --nav_size: clamp(1.2rem, 1.4vw, 1.6rem);
     --font_m: clamp(1.2rem, 1.5vw, 1.8rem);
     --font_l: clamp(1.8rem, 2.5vw, 2.8rem);
+
+    /*--- variables for burgermenu ---*/
+    --burger_bar_width: 45px;
+    --burger_bar_height: 4px;
+    --burger_gap: 8px;
+    --burger_height: calc(var(--burger_bar_height) * 3 + var(--burger_gap) * 2);
+    --x_bar_width: calc(var(--burger_height) * 1.41421356237);
   }
 
   .main_grid {
@@ -901,6 +913,85 @@ form .cta_btn {
 
   nav .logo {
     grid-column: 2 / 6;
+  }
+
+  nav .logo img {
+    max-width: 10vw;
+  }
+
+  /* --- burger menu --- */
+
+  .burger_menu {
+    align-items: end;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--burger_gap);
+    grid-column: 12 / -2;
+    grid-row: 1 / 2;
+    height: var(--burger_height);
+    margin-top: 10%;
+  }
+
+  .burger_bar {
+    background-color: var(--clr_light_bg);
+    border-radius: var(--border_rad);
+    height: var(--burger_bar_height);
+    transform-origin: right center;
+    width: var(--burger_bar_width);
+  }
+
+  .burger_bar.clicked:nth-child(1) {
+    rotate: -45deg;
+    translate: 0 calc(var(--burger_bar_height) / -2);
+    transition: translate ease-in-out 0.3s, rotate ease-in-out 0.5s;
+    width: var(--x_bar_width);
+  }
+
+  .burger_bar.clicked:nth-child(2) {
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+    width: 0;
+  }
+
+  .burger_bar.clicked:nth-child(3) {
+    rotate: 45deg;
+    translate: 0 calc(var(--burger_bar_height) / 2);
+    transition: translate ease-in-out 0.3s, rotate ease-in-out 0.5s;
+    width: var(--x_bar_width);
+  }
+
+  .burger_bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: translate ease-in-out 0.3s, rotate ease-in-out 0.5s;
+  }
+
+  nav .menu {
+    background-color: var(--clr_dark2);
+    border-radius: var(--border_rad);
+    flex-direction: column;
+    gap: var(--main_vertical_space);
+    padding: 10dvw 5dvw 5dvw;
+    position: absolute;
+    right: -5dvw;
+    top: 20%;
+    transform-origin: top;
+    transition: all ease-in-out 0.75s;
+    width: 100dvw;
+    z-index: -1;
+  }
+
+  .menu li a {
+    text-align: right;
+  }
+
+  .hidden {
+    transform: scaleY(0);
+  }
+
+  .visible {
+    display: inherit;
+    transform: scaleY(1);
   }
 
   /* --- FOOTER ----------------------------------------------------------------------------------------------------- */
@@ -1027,10 +1118,17 @@ form .cta_btn {
   :root {
     /* --- font sizes --- */
     --font_m: clamp(1.2rem, 1.6vw, 2.2rem);
-    --font_l: clamp(1.3rem, 1.5vw, 2rem);
+    --font_l: clamp(1.2rem, 1.4vw, 2rem);
 
     /* --- most used spacing --- */
     --main_vertical_space: 8dvw;
+
+    /*--- variables for burgermenu ---*/
+    --burger_bar_width: 40px;
+    --burger_bar_height: 3px;
+    --burger_gap: 6px;
+    --burger_height: calc(var(--burger_bar_height) * 3 + var(--burger_gap) * 2);
+    --x_bar_width: calc(var(--burger_height) * 1.41421356237);
   }
 
   .main_grid {
@@ -1064,6 +1162,7 @@ form .cta_btn {
   }
 
   .buttons {
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -1077,11 +1176,17 @@ form .cta_btn {
   nav .logo h4 {
     font-size: var(--font_s);
     line-height: normal;
-    padding-bottom: 0;
+    padding-top: 8%;
   }
 
-  nav ul {
-    display: none;
+  .burger_menu {
+    align-self: center;
+    margin: 0 0 15%;
+  }
+
+  nav .menu {
+    padding: 15dvw 10dvw 5dvw;
+    right: -10dvw;
   }
 
   /* --- FOOTER ----------------------------------------------------------------------------------------------------- */
@@ -1189,4 +1294,9 @@ form .cta_btn {
   form textarea {
     margin: 2% 0 5%;
   } */
+}
+
+/* --- TINY MOBILE SCREENS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 350px) {
 }
