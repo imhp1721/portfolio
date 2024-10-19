@@ -62,7 +62,7 @@ function Kontakt() {
           </article>
         </section>
         <section>
-          <img src={wave} alt="Wave overgang" />
+          <img className="wave" src={wave} alt="Wave overgang" />
         </section>
         <ContactForm />
       </main>
