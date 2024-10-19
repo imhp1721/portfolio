@@ -15,6 +15,7 @@ function Nav() {
         <img src={logo} alt="im-press logo" />
         <h4>im-press</h4>
       </Link>
+      <div className="burger"></div>
       <ul>
         <li>
           <NavLink reloadDocument to="/om-mig">

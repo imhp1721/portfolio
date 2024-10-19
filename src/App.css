@@ -248,6 +248,7 @@ nav .logo img {
 nav .logo h4 {
   font-weight: var(--header_regular);
   padding-bottom: 15%;
+  white-space: nowrap;
 }
 
 nav ul {
@@ -808,6 +809,14 @@ form .cta_btn {
 
 @media only screen and (min-width: 1200px) {
   :root {
+    /* --- font sizes --- */
+    --font_xs: clamp(0.8rem, 1vw, 1.1rem);
+    --font_s: clamp(1.2rem, 1.4vw, 1.8rem);
+    --nav_size: clamp(1.4rem, 1.6vw, 2rem);
+    --font_m: clamp(1.8rem, 2.2vw, 2.8rem);
+    --font_l: clamp(2.2rem, 3.5vw, 4rem);
+
+    /* --- most used spacing --- */
     --main_vertical_space: 2dvw;
   }
 
@@ -851,9 +860,8 @@ form .cta_btn {
 @media only screen and (max-width: 850px) {
   :root {
     /* --- font sizes --- */
-    --font_xs: clamp(0.6rem, 0.9vw, 1rem);
-    --font_s: clamp(0.8rem, 1vw, 1.1rem);
-    --nav_size: clamp(0.9rem, 1.15vw, 1.2rem);
+    --font_s: clamp(0.9rem, 1vw, 1.2rem);
+    --nav_size: clamp(1rem, 1.2vw, 1.4rem);
     --font_m: clamp(1.2rem, 1.5vw, 1.8rem);
     --font_l: clamp(1.8rem, 2.5vw, 2.8rem);
   }
@@ -864,6 +872,10 @@ form .cta_btn {
 
   .grid_w_wave {
     grid-template-columns: 5dvw repeat(12, 1fr) 5dvw;
+  }
+
+  .cta_btn {
+    font-weight: var(--main_font_medium);
   }
 
   /* --- text & image 2-part layout --- */
@@ -940,8 +952,8 @@ form .cta_btn {
   /* --- skills section --- */
 
   .bar {
-    border-radius: 3px;
-    height: 15px;
+    border-radius: 4px;
+    height: 20px;
   }
 
   .amount {
@@ -1014,14 +1026,11 @@ form .cta_btn {
 @media only screen and (max-width: 550px) {
   :root {
     /* --- font sizes --- */
-    --font_xs: clamp(0.5rem, 0.5vw, 0.8rem);
-    --font_s: clamp(0.8rem, 0.9vw, 1rem);
-    --nav_size: clamp(0.6rem, 0.8vw, 1rem);
-    --font_m: clamp(1rem, 1.2vw, 1.5rem);
-    --font_l: clamp(1.2rem, 1.2vw, 1.8rem);
+    --font_m: clamp(1.2rem, 1.6vw, 2.2rem);
+    --font_l: clamp(1.3rem, 1.5vw, 2rem);
 
     /* --- most used spacing --- */
-    --main_vertical_space: 5dvw;
+    --main_vertical_space: 8dvw;
   }
 
   .main_grid {
@@ -1037,6 +1046,7 @@ form .cta_btn {
   .txt_left h2,
   .txt_right h2 {
     justify-self: center;
+    text-align: center;
   }
 
   .txt_left img,
@@ -1059,18 +1069,24 @@ form .cta_btn {
 
   /* --- NAVIGATION ------------------------------------------------------------------------------------------------- */
 
-  /* nav .logo {
+  nav .logo {
     align-items: flex-start;
+    padding-top: 2%;
+  }
+
+  nav .logo h4 {
+    font-size: var(--font_s);
+    line-height: normal;
+    padding-bottom: 0;
   }
 
   nav ul {
-    align-items: flex-start;
-    font-weight: var(--header_regular);
-  } */
+    display: none;
+  }
 
   /* --- FOOTER ----------------------------------------------------------------------------------------------------- */
 
-  /* footer .logo {
+  footer .logo {
     grid-column: 2 / 4;
   }
 
@@ -1078,24 +1094,33 @@ form .cta_btn {
     display: none;
   }
 
+  /* --- contact info & links --- */
+
   footer .info {
+    gap: 1.5dvw;
     grid-column: 2 / -2;
+    padding-bottom: 1dvw;
   }
 
   footer .info h2 {
     font-size: var(--font_s);
     font-weight: var(--header_regular);
     letter-spacing: 0.1rem;
-    padding-bottom: 1.5%;
+    white-space: nowrap;
   }
 
   footer .info .so_me {
-    padding-bottom: 1%;
+    gap: 4dvw;
   }
 
   footer .info .link {
-    padding-bottom: 1%;
-  } */
+    gap: 0;
+    letter-spacing: 0.1rem;
+  }
+
+  footer .info .link a {
+    line-height: normal;
+  }
 
   /* --- MAIN ------------------------------------------------------------------------------------------------------- */
 
@@ -1104,34 +1129,33 @@ form .cta_btn {
   /* --- hero section --- */
 
   h1 {
+    margin: 0 17dvw;
     top: 3vh;
+    width: 66%;
   }
 
   .hero img {
-    max-height: 10dvh;
+    max-height: 12dvh;
   }
 
   /* --- marquee feature --- */
 
-  /* .feature {
-    padding: 5% 0;
+  .feature {
+    padding: var(--main_vertical_space) 0;
   }
 
   .word {
-    border-radius: 3px;
-    font-weight: var(--main_font_medium); */
-    /* left: calc(160px * 17); width of each word * amount of words */
-    /* width: 150px; */
+    font-weight: var(--main_font_medium);
+    left: calc(190px * 17); /* width of each word * amount of words */
+    padding: 0;
+    width: 170px;
   }
 
   /* --- skills section --- */
 
-  /* .skills {
-    width: 80%;
-  }
-
-  .skills h2 {
-    padding-bottom: 10%;
+  .skills {
+    padding-bottom: var(--main_vertical_space);
+    row-gap: var(--main_vertical_space);
   }
 
   .skills .frontend,
@@ -1144,9 +1168,10 @@ form .cta_btn {
     width: 60%;
   }
 
-  .skill {
-    padding-bottom: 5%;
-  } */
+  .skills .quote p {
+    font-size: var(--nav_size);
+    width: 100%;
+  }
 
   /* ----------------
     CONTACT
@@ -1164,4 +1189,4 @@ form .cta_btn {
   form textarea {
     margin: 2% 0 5%;
   } */
-
+}
