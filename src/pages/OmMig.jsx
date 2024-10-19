@@ -101,8 +101,10 @@ function OmMig() {
         <section id="hobby" className="hobby main_grid">
           <h2>Mine fritidsinteresser</h2>
           <ImageCarousel />
-          <h3>Håndarbejde, kunsthåndværk & upcycling</h3>
-          <p>Sy - Akvarel - Hækling - Tegning - Smykker - Bolig - Strik</p>
+          <article>
+            <h3>Håndarbejde, kunsthåndværk & upcycling</h3>
+            <p>Sy - Akvarel - Hækling - Tegning - Smykker - Bolig - Strik</p>
+          </article>
           <ImageCollage />
         </section>
       </main>

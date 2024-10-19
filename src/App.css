@@ -550,6 +550,8 @@ h1 {
 
 .timeline .wave {
   align-self: center;
+  object-fit: cover;
+  min-height: 100%;
 }
 
 .year_txt {
@@ -561,7 +563,7 @@ h1 {
 
 .mdu,
 .intern {
-  grid-row: 3 / 7;
+  grid-row: 3 / 6;
   justify-self: center;
   width: 90%;
 }
@@ -589,7 +591,7 @@ h1 {
 .hf,
 .ida {
   align-self: end;
-  grid-row: 6 / 10;
+  grid-row: 7 / 10;
   justify-self: center;
   width: 67%;
 }
@@ -611,7 +613,6 @@ h1 {
 
 .hobby {
   margin-top: 0;
-  max-width: 1200px;
   padding-top: 10dvw;
 }
 
@@ -620,8 +621,7 @@ h1 {
 }
 
 .hobby h2,
-.hobby h3,
-.hobby p {
+.hobby article {
   grid-column: 1 / -1;
 }
 
@@ -704,7 +704,6 @@ h1 {
 .img_cluster .sem1_exam {
   align-self: center;
   grid-column: 3 / -1;
-  grid-row: 4 / 7;
   justify-self: end;
   width: 75%;
 }
@@ -912,11 +911,11 @@ form .cta_btn {
   /* --- NAVIGATION ------------------------------------------------------------------------------------------------- */
 
   nav .logo {
-    grid-column: 2 / 6;
+    grid-column: 2 / 7;
   }
 
   nav .logo img {
-    max-width: 10vw;
+    max-width: 12vw;
   }
 
   /* --- burger menu --- */
@@ -1090,6 +1089,12 @@ form .cta_btn {
     width: 57%;
   }
 
+  /* --- hobby section --- */
+
+  .hobby {
+    padding-top: 15dvw;
+  }
+
   /* --- PROJEKTER --- */
 
   .img_cluster .sem2_exam {
@@ -1121,7 +1126,7 @@ form .cta_btn {
     --font_l: clamp(1.2rem, 1.4vw, 2rem);
 
     /* --- most used spacing --- */
-    --main_vertical_space: 8dvw;
+    --main_vertical_space: 7.5dvw;
 
     /*--- variables for burgermenu ---*/
     --burger_bar_width: 40px;
@@ -1163,14 +1168,14 @@ form .cta_btn {
 
   .buttons {
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 5dvw;
+    justify-content: center;
   }
 
   /* --- NAVIGATION ------------------------------------------------------------------------------------------------- */
 
   nav .logo {
     align-items: flex-start;
-    padding-top: 2%;
   }
 
   nav .logo h4 {
@@ -1231,6 +1236,10 @@ form .cta_btn {
 
   /* --- HOME --- */
 
+  .home .info article .cta_txt {
+    display: initial;
+  }
+
   /* --- hero section --- */
 
   h1 {
@@ -1278,25 +1287,178 @@ form .cta_btn {
     width: 100%;
   }
 
-  /* ----------------
-    CONTACT
-  ----------------- */
+  /* --- OM MIG --- */
 
-  /* .contact .cta_txt {
-    padding: 4% 0 4%;
+  .om_mig .info .full_fig_img,
+  .om_mig .info article {
+    grid-column: 1 / -1;
   }
 
-  form {
+  .om_mig .info .blob {
+    grid-column: 3 / -3;
+    padding: 10dvw 0;
+  }
+
+  .om_mig .info article .cta_txt {
+    display: initial;
+  }
+
+  /* --- timeline section --- */
+
+  .year_txt {
+    font-weight: var(--header_regular);
+    line-height: normal;
+  }
+
+  .mdu,
+  .intern {
+    width: 100%;
+  }
+
+  .mdu {
+    grid-column: 4 / 8;
+  }
+
+  .intern {
+    grid-column: 10 / 14;
+  }
+
+  .arrow {
+    min-height: 100%;
+    object-fit: fill;
+  }
+
+  .hf,
+  .ida {
+    align-self: flex-start;
+    grid-row: 6 / 11;
+    justify-self: center;
+    width: 90%;
+  }
+
+  .ida {
+    grid-column: 8 / 12;
+  }
+
+  /* --- hobby section --- */
+
+  .hobby h2 {
+    padding-bottom: 0;
+  }
+
+  .hobby h3 {
+    font-size: var(--font_s);
+    padding-bottom: 1dvw;
+  }
+
+  .img_carousel,
+  .img_collage {
+    padding: 0;
+  }
+
+  /* --- PROJEKTER --- */
+
+  .img_cluster .sem2_exam {
+    grid-column: 6 / 11;
+    grid-row: 1 / 4;
     width: 80%;
   }
 
-  form input,
-  form textarea {
-    margin: 2% 0 5%;
-  } */
+  .img_cluster .interactive {
+    align-self: flex-start;
+    grid-column: 1 / 6;
+    grid-row: 2 / 6;
+    justify-self: flex-start;
+    width: 95%;
+  }
+
+  .img_cluster .sem1_exam {
+    align-self: flex-end;
+    grid-column: 8 / -1;
+    grid-row: 4 / 8;
+    width: 90%;
+  }
+
+  .img_cluster .mobile_first {
+    align-self: flex-end;
+    grid-column: 3 / 8;
+    grid-row: 6 / 10;
+    justify-self: flex-end;
+    width: 80%;
+  }
+
+  /* --- projects section --- */
+
+  #projects {
+    padding: var(--main_vertical_space) 0;
+  }
+
+  .projects .info {
+    padding-top: var(--main_vertical_space);
+    margin-top: 0;
+  }
+
+  .projects .info img {
+    grid-row: 1 / 2;
+    width: 60%;
+  }
+
+  .projects .info article {
+    gap: 5dvw;
+    grid-row: 2 / 3;
+  }
+
+  .projects .info.txt_right h2 {
+    text-align: center;
+  }
+
+  .projects .info.txt_left .cta_btn,
+  .projects .info.txt_right .cta_btn {
+    align-self: center;
+  }
+
+  /* --- KONTAKT --- */
+
+  .kontakt .info {
+    margin-bottom: 5dvw;
+    row-gap: var(--main_vertical_space);
+  }
+
+  .kontakt .info img {
+    grid-row: 2 / 3;
+  }
+
+  .kontakt .buttons {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+  }
+
+  /* --- contact form --- */
+
+  form h2 {
+    padding-bottom: 0;
+  }
 }
 
 /* --- TINY MOBILE SCREENS --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 350px) {
+  :root {
+    /* --- font sizes --- */
+    --font_s: clamp(0.8rem, 1vw, 1.2rem);
+    --nav_size: clamp(1rem, 1.2vw, 1.5rem);
+    --font_m: clamp(1.2rem, 1.5vw, 2rem);
+  }
+
+  footer .info h2 {
+    display: none;
+  }
+
+  /* --- HOME --- */
+
+  .skills .quote p {
+    font-size: var(--font_s);
+    line-height: 150%;
+  }
 }
