@@ -36,15 +36,16 @@ function Projekter() {
           <h2>Projekter på multi&shy;medie&shy;design&shy;uddannelsen</h2>
           <article>
             <p>
-              På multimediedesignuddannelsen kombineres teori og praksis i
-              projekter, hvor vi løser virkelighedsnære problemstillinger både
+              På multi&shy;medie&shy;design&shy;uddannelsen kombineres
+              teori og praksis i projekter, hvor vi løser
+              virke&shy;ligheds&shy;nære problem&shy;stil&shy;linger både
               individuelt og i teams. Eksempler inkluderer at udvikle visuel
               identitet og hjemmeside til en eksisterende virksomhed, baseret på
               deres mål og brugernes behov.
             </p>
             <p className="cta_txt">
-              Du kan opleve mine studieprojekter på denne side. Du er også
-              velkommen til at se nærmere på mine fritidsprojekter.
+              Du kan opleve mine studie&shy;projekter på denne side. Du er også
+              velkommen til at se nærmere på mine fritids&shy;projekter.
             </p>
             <div className="buttons">
               <button className="cta_btn">

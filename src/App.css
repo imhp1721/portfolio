@@ -133,6 +133,7 @@ h2 {
 .wave {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -234,7 +235,6 @@ nav {
 
 nav .wave {
   min-height: 60px;
-  object-fit: cover;
 }
 
 nav .logo {
@@ -288,6 +288,10 @@ footer {
   color: var(--clr_light_bg);
 }
 
+footer .wave {
+  min-height: 200px;
+}
+
 footer .logo {
   display: flex;
   font-size: var(--font_m);
@@ -297,7 +301,7 @@ footer .logo {
 
 footer .logo img {
   transform: translateY(2%);
-  max-width: 16vw;
+  max-width: 16dvw;
 }
 
 footer .logo h4 {
@@ -310,10 +314,10 @@ footer .logo h4 {
 footer .info {
   display: flex;
   flex-direction: column;
-  gap: 2dvw;
   grid-column: 6 / -2;
   grid-row: 1 / 2;
   padding-bottom: var(--main_vertical_space);
+  row-gap: 2dvw;
   text-align: right;
 }
 
@@ -550,8 +554,11 @@ h1 {
 
 .timeline .wave {
   align-self: center;
-  object-fit: cover;
   min-height: 100%;
+}
+
+.timeline .blob {
+  width: 100%;
 }
 
 .year_txt {
@@ -623,6 +630,10 @@ h1 {
 .hobby h2,
 .hobby article {
   grid-column: 1 / -1;
+}
+
+.hobby h3 {
+  font-size: var(--nav_size);
 }
 
 /* --- image carousel --- */
@@ -768,7 +779,7 @@ h1 {
 
 form.main_grid {
   margin-top: 0;
-  padding-top: 10dvw;
+  padding-top: 8dvw;
   row-gap: var(--main_vertical_space);
 }
 
@@ -839,6 +850,14 @@ form .cta_btn {
     justify-self: baseline;
   }
 
+  .cta_btn {
+    font-size: var(--font_xs);
+  }
+
+  .cta_btn.scroll img {
+    height: var(--font_s);
+  }
+
   /* --- HOME --- */
 
   @keyframes move_marquee {
@@ -852,15 +871,15 @@ form .cta_btn {
     width: 310px;
   }
 
-  .skills .quote p {
-    font-size: var(--nav_size);
-  }
-
   /* --- OM MIG --- */
 
   .om_mig .info h2 {
     grid-column: 1 / -1;
     justify-self: center;
+  }
+
+  .hobby h4 {
+    font-size: var(--nav_size);
   }
 
   /* --- KONTAKT --- */
@@ -1011,10 +1030,6 @@ form .cta_btn {
     white-space: nowrap;
   }
 
-  footer .info h2 {
-    letter-spacing: normal;
-  }
-
   footer .info {
     grid-column: 2 / -2;
   }
@@ -1083,20 +1098,14 @@ form .cta_btn {
 
   /* --- timeline section --- */
 
-  .timeline {
-    grid-template-rows: repeat(9, 1fr);
-  }
-
   .mdu,
   .intern {
-    grid-row: 2 / 5;
     width: 80%;
   }
 
   .hf,
   .ida {
     align-self: baseline;
-    grid-row: 6 / 9;
     justify-self: center;
     width: 57%;
   }
@@ -1135,7 +1144,7 @@ form .cta_btn {
   :root {
     /* --- font sizes --- */
     --font_m: clamp(1.2rem, 1.6vw, 2.2rem);
-    --font_l: clamp(1.2rem, 1.4vw, 2rem);
+    --font_l: clamp(1.1rem, 1.3vw, 1.5rem);
 
     /* --- most used spacing --- */
     --main_vertical_space: 7.5dvw;
@@ -1212,8 +1221,8 @@ form .cta_btn {
 
   /* --- FOOTER ----------------------------------------------------------------------------------------------------- */
 
-  footer .logo {
-    grid-column: 2 / 4;
+  footer .logo img {
+    max-width: 20dvw;
   }
 
   footer .logo h4 {
@@ -1223,16 +1232,12 @@ form .cta_btn {
   /* --- contact info & links --- */
 
   footer .info {
-    gap: 1.5dvw;
-    grid-column: 2 / -2;
-    padding-bottom: 1dvw;
+    padding-bottom: 4dvw;
+    row-gap: 4dvw;
   }
 
   footer .info h2 {
     font-size: var(--font_s);
-    font-weight: var(--header_regular);
-    letter-spacing: 0.1rem;
-    white-space: nowrap;
   }
 
   footer .info .so_me {
@@ -1240,12 +1245,7 @@ form .cta_btn {
   }
 
   footer .info .link {
-    gap: 0;
     letter-spacing: 0.1rem;
-  }
-
-  footer .info .link a {
-    line-height: normal;
   }
 
   /* --- MAIN ------------------------------------------------------------------------------------------------------- */
@@ -1259,6 +1259,7 @@ form .cta_btn {
   /* --- hero section --- */
 
   h1 {
+    line-height: normal;
     margin: 0 17dvw;
     top: 3vh;
     width: 66%;
@@ -1272,6 +1273,10 @@ form .cta_btn {
 
   .feature {
     padding: var(--main_vertical_space) 0;
+  }
+
+  .feature .wave {
+    min-height: 120px;
   }
 
   .word {
@@ -1299,8 +1304,7 @@ form .cta_btn {
   }
 
   .skills .quote p {
-    font-size: var(--nav_size);
-    width: 100%;
+    width: 90%;
   }
 
   /* --- OM MIG --- */
@@ -1321,22 +1325,29 @@ form .cta_btn {
 
   /* --- timeline section --- */
 
+  .timeline .blob {
+    min-width: 100px;
+  }
+
   .year_txt {
     font-weight: var(--header_regular);
     line-height: normal;
   }
 
-  .mdu,
-  .intern {
-    width: 100%;
-  }
-
   .mdu {
-    grid-column: 4 / 8;
+    align-self: flex-end;
+    grid-column: 2 / 8;
+    grid-row: 2 / 6;
+    width: 90%;
+  }
+
+  .mdu .year_txt {
+    padding-top: 5dvw;
   }
 
   .intern {
-    grid-column: 10 / 14;
+    grid-column: 9 / 14;
+    width: 100%;
   }
 
   .arrow {
@@ -1347,13 +1358,22 @@ form .cta_btn {
   .hf,
   .ida {
     align-self: flex-start;
-    grid-row: 6 / 11;
     justify-self: center;
-    width: 90%;
+  }
+
+  .hf {
+    grid-column: 2 / 7;
+    width: 100%;
   }
 
   .ida {
-    grid-column: 8 / 12;
+    grid-column: 8 / 14;
+    grid-row: 7 / 11;
+    width: 90%;
+  }
+
+  .ida .year_txt {
+    padding-bottom: 5dvw;
   }
 
   /* --- hobby section --- */
@@ -1467,14 +1487,9 @@ form .cta_btn {
     --font_m: clamp(1.2rem, 1.5vw, 2rem);
   }
 
-  footer .info h2 {
-    display: none;
-  }
-
   /* --- HOME --- */
 
   .skills .quote p {
-    font-size: var(--font_s);
     line-height: 150%;
   }
 }

@@ -51,11 +51,11 @@ function Kontakt() {
           <article>
             <p>
               Som praktikant håber jeg på at bidrage ved at løse opgaver inden
-              for frontend og multimediedesign. Jeg søger en mulighed for at
-              være en aktiv del af jeres team, deltage i problemløsning og
-              derigennem udvide mine færdigheder inden for faget. Jeg er klar
-              til at bringe kreative indspark til bordet og ser frem til både
-              udfordringer og læring.
+              for frontend og multi&shy;medie&shy;design. Jeg søger en mulighed
+              for at være en aktiv del af jeres team, deltage i
+              problem&shy;løsning og derigennem udvide mine færdig&shy;heder
+              inden for faget. Jeg er klar til at bringe kreative indspark til
+              bordet og ser frem til både udfordringer og læring.
               <br />
               Tag gerne kontakt, hvis du er interesseret i at samarbejde om
               spændende projekter.
@@ -74,7 +74,7 @@ function Kontakt() {
                 <em>51953055</em>
               </Callto>
               . Ellers kan du sende mig en besked ved at benytte
-              kontaktformularen herunder.
+              kontakt&shy;formularen på denne side.
             </p>
           </article>
           <div className="buttons">
