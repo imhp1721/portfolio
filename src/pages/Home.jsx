@@ -1,45 +1,62 @@
 import { Link } from "react-router-dom";
 import MarqueeFeature from "../components/MarqueeFeature";
-import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+
+//img imports
+
+import heroImg from "../assets/img/hero.jpg";
+import portrait from "../assets/img/portrait.png";
+import wave from "../assets/waves/marquee.svg";
+import blob from "../assets/blobs/skills.svg";
 
 //FORSIDE
 
 function Home() {
   return (
     <>
+      <section className="hero">
+        <img src={heroImg} alt="På hængebro i 40 meters højde i Ghana" />
+        <h1>Inger-Margrethe Holt Povlsen</h1>
+      </section>
+      <Nav />
       <main className="home">
-        <section className="info">
+        <section className="info txt_left main_grid">
+          <h2>Designbevidst frontend udvikler</h2>
           <article>
-            <h2>Designbevidst frontend udvikler</h2>
             <p>
               Som multi&shy;medie&shy;design&shy;studerende med
               frontend-specialisering er jeg ikke blot teknisk, men også
               æstetisk orienteret. Jeg stræber efter at skabe designs, der både
               er intuitive og appellerende for brugeren, samtidig med at de er
-              velfungerende og strukturerede i koden. Jeg har sans for at skabe
-              content, hvilket jeg praktiserer gennem mit studiejob, men min
-              sande passion ligger i at skabe harmoni mellem de tekniske og
-              visuelle aspekter af mit fag.
+              velfungerende og strukturerede i koden.
+              <br />
+              Jeg har sans for at skabe content, hvilket jeg praktiserer gennem
+              mit studiejob, men min sande passion ligger i at skabe harmoni
+              mellem de tekniske og visuelle aspekter af mit fag.
             </p>
             <p className="cta_txt">
               Jeg søger praktikplads fra 6. januar 2025.
             </p>
-            <div>
+            <div className="buttons">
               <button className="cta_btn">
-                <Link to={"/kontakt"}>Kontakt mig</Link>
+                <Link reloadDocument to={"/projekter"}>
+                  Se mine projekter
+                </Link>
               </button>
               <button className="cta_btn">
-                <Link to={"/projekter"}>Se mine projekter</Link>
+                <Link reloadDocument to={"/kontakt"}>
+                  Kontakt mig
+                </Link>
               </button>
             </div>
           </article>
-          <img src="/img/portrait.png" alt="Portrætfoto" />
+          <img src={portrait} alt="Portrætfoto" />
         </section>
-        <section className="feature">
-          <img src="/img/waves/feature.svg" alt="Wave" />
+        <section className="feature grid_w_wave">
+          <img className="wave" src={wave} alt="Wave" />
           <MarqueeFeature />
         </section>
-        <section className="skills">
+        <section className="skills main_grid">
           <h2>Multimediedesigner i evig udvikling</h2>
           <article className="frontend">
             <div className="skill">
@@ -72,11 +89,7 @@ function Home() {
               Som det videbegærlige menneske, jeg er, vil jeg altid søge at
               tilegne mig ny viden og udvide mine faglige kompetencer.
             </p>
-            <img
-              className="blob"
-              src="/img/blobs/skills.svg"
-              alt="Blob"
-            />
+            <img className="blob" src={blob} alt="Blob" />
           </article>
           <article className="design">
             <div className="skill">
@@ -106,7 +119,6 @@ function Home() {
           </article>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

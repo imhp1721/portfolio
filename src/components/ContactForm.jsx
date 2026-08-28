@@ -25,7 +25,7 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form id="contactform" className="main_grid" onSubmit={onSubmit}>
       <h2>Kontaktformular</h2>
       <div>
         <label>Dit fulde navn</label>

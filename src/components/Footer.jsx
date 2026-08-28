@@ -1,6 +1,17 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
+//img imports
+
+import wave from "../assets/waves/footer.svg";
+import logo from "../assets/img/logo.png";
+import linkedIn from "../assets/icons/linkedin.png";
+import gitHub from "../assets/icons/github.png";
+import ig from "../assets/icons/ig.png";
+import fb from "../assets/icons/fb.png";
+
+//FOOTER
+
 function Footer() {
   //Mailto og callto funktionalitet er fra https://www.30secondsofcode.org/react/s/mailto-callto/
 
@@ -17,38 +28,32 @@ function Footer() {
   };
 
   return (
-    <footer>
-      <img
-        className="wave"
-        src="img/waves/footer.svg"
-        alt="Wavy footer"
-      />
-      <Link to="/home" className="logo">
-        <img src="/img/logo.png" alt="im-press logo" />
+    <footer className="grid_w_wave">
+      <img className="wave" src={wave} alt="Wavy footer" />
+      <Link reloadDocument to="/" className="logo">
+        <img src={logo} alt="im-press logo" />
         <h4>im-press</h4>
       </Link>
-      <section className="info">
+      <article className="info">
         <h2>Inger-Margrethe Holt Povlsen</h2>
-        <div className="so_me">
+        <section className="so_me">
           <Link
-            to={
-              "https://www.linkedin.com/in/inger-margrethe-holt-povlsen-85170a28a/"
-            }
-            target="blank"
+            to={"https://www.linkedin.com/in/inger-margrethe-holt-povlsen/"}
+            target="_blank"
           >
-            <img src="/img/icons/linkedin.png" alt="LinkedIn logo" />
+            <img src={linkedIn} alt="LinkedIn logo" />
           </Link>
-          <Link to={"https://github.com/imhp1721"} target="blank">
-            <img src="/img/icons/github.png" alt="GitHub logo" />
+          <Link to={"https://github.com/imhp1721"} target="_blank">
+            <img src={gitHub} alt="GitHub logo" />
           </Link>
-          <Link to={"https://www.instagram.com/im_holt/"} target="blank">
-            <img src="/img/icons/ig.png" alt="Instagram logo" />
+          <Link to={"https://www.instagram.com/im_holt/"} target="_blank">
+            <img src={ig} alt="Instagram logo" />
           </Link>
-          <Link to={"https://www.facebook.com/imhp1721"} target="blank">
-            <img src="/img/icons/fb.png" alt="Facebook logo" />
+          <Link to={"https://www.facebook.com/imhp1721"} target="_blank">
+            <img src={fb} alt="Facebook logo" />
           </Link>
-        </div>
-        <div className="link">
+        </section>
+        <section className="link">
           <Mailto
             email="imhp@hotmail.dk"
             subject="Praktikmulighed hos *tilføj din virksomhed*"
@@ -56,11 +61,9 @@ function Footer() {
           >
             imhp@hotmail.dk
           </Mailto>
-        </div>
-        <div className="link">
           <Callto phone="+4551953055">+4551953055</Callto>
-        </div>
-      </section>
+        </section>
+      </article>
       <section className="copy">
         <p>Copyright &copy; 2024 im-press | All rights reserved</p>
       </section>
