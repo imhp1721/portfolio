@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Projekter from "./pages/Projekter";
 import OmMig from "./pages/OmMig";
@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/projekter" element={<Projekter />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/kontakt" element={<Kontakt />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

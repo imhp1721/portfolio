@@ -439,7 +439,8 @@ h1 {
   border-radius: var(--border_rad);
   color: var(--clr_dark1);
   font-weight: var(--main_font_bold);
-  left: calc(250px * 17); /* width of each word * amount of words */
+  left: calc(250px * 17);
+  /* width of each word * amount of words */
   padding: .25em 0;
   position: absolute;
   text-align: center;
@@ -540,7 +541,8 @@ h1 {
 .om_mig .info .full_fig_img {
   height: 100%;
   position: absolute;
-  transition: all 0.5s ease-in-out; /* Smooth transition over 0.5 seconds */
+  transition: all 0.5s ease-in-out;
+  /* Smooth transition over 0.5 seconds */
   max-width: 50%;
   z-index: 1;
 }
@@ -672,7 +674,7 @@ h1 {
 
 /* --- PROJEKTER ---------------------------------------------------------------------------------------------------- */
 
-.projekter > .info {
+.projekter>.info {
   margin-bottom: 5dvw;
   row-gap: var(--main_vertical_space);
 }
@@ -866,7 +868,8 @@ form .cta_btn {
   }
 
   .word {
-    left: calc(400px * 17); /* width of each word * amount of words */
+    left: calc(400px * 17);
+    /* width of each word * amount of words */
     width: 310px;
   }
 
@@ -1060,7 +1063,8 @@ form .cta_btn {
   /* --- marquee feature --- */
 
   .word {
-    left: calc(200px * 17); /* width of each word * amount of words */
+    left: calc(200px * 17);
+    /* width of each word * amount of words */
     width: 180px;
   }
 
@@ -1279,7 +1283,8 @@ form .cta_btn {
 
   .word {
     font-weight: var(--main_font_medium);
-    left: calc(190px * 17); /* width of each word * amount of words */
+    left: calc(190px * 17);
+    /* width of each word * amount of words */
     width: 170px;
   }
 
